@@ -4,14 +4,17 @@
   Create claimant record
 {% endblock %}
 
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+{% endblock %}
+
+  <a href="no-claimant-result" class="govuk-back-link">Back</a>
+
 {% block content %}
   <form id="form" method="post" action="#">
 
     <div class="govuk-width-container">
-      <a href="claimant-search" class="govuk-back-link">Back</a>
-
       <main class="govuk-main-wrapper">
-
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-l">Enter claimant details</h1>

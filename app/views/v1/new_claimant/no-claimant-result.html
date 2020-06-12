@@ -4,20 +4,22 @@
   Claimant search no results
 {% endblock %}
 
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+{% endblock %}
+
+  <a href="claimant-search" class="govuk-back-link">Back</a>
+
 {% block content %}
   <form id="form" method="post" action="create-record">
 
     <div class="govuk-width-container">
-      <a href="claimant-search" class="govuk-back-link">Back</a>
-
       <main class="govuk-main-wrapper">
-
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <h1 class="govuk-heading-l">No record found</h1>
             <p><a href="claimant-search">Try again</a> or create an account</P>
             <input type="submit" class="govuk-button govuk-!-margin-top-6" value="Create account" id="submit">
-
           </div> <!-- govuk-grid-column-two-thirds -->
 
           <div class="govuk-grid-column-one-third">
