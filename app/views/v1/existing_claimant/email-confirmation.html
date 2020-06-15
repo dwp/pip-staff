@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Email confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="claimant-search">
+
+    <div class="govuk-width-container">
+      <main class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+              <h1 class="govuk-panel__title">
+                Email sent to Wilma Flintstone
+              </h1>
+              <div class="govuk-panel__body">
+                wilma.flintstone@email.com
+              </div>
+            </div> <!-- govuk-panel -->
+            <input type="submit" class="govuk-button govuk-!-margin-top-6" value="Back to search" id="submit">
+          </div> <!-- govuk-grid-column-full -->
+
+        </div> <!-- govuk-grid-row -->
+
+      </main>
+    </div> <!-- govuk-width-container -->
+  </form>
+{% endblock %}
