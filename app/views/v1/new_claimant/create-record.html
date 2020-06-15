@@ -9,21 +9,23 @@
   <a href="no-claimant-result" class="govuk-back-link">Back</a>
 {% endblock %}
 
-  <a href="no-claimant-result" class="govuk-back-link">Back</a>
-
 {% block content %}
-  <form id="form" method="post" action="create-confirmation">
+  <form id="form" method="post" action="check-your-answers">
 
     <div class="govuk-width-container">
       <main class="govuk-main-wrapper">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Enter claimant details</h1>
+            <h1 class="govuk-heading-l">Claimant details</h1>
             <h2 class="govuk-heading-m">Full name</h2>
             <p class="govuk-body">Wilma Flintstone</p>
             <h2 class="govuk-heading-m">Email address<h2>
             <p class="govuk-body">wilma.flintstone@email.com</p>
-            <div class="govuk-form-group">
+
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+            
+            <h1 class="govuk-heading-l">Enter remaining claimant details</h1>
+            <div class="govuk-form-group govuk-!-padding-bottom--6">
               <label class="govuk-label" for="national-insurance-number">
                 National Insurance number
               </label>
@@ -33,7 +35,7 @@
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-heading-m">
+                  <h1 class="govuk-label">
                     Date of birth
                   </h1>
                 </legend>
