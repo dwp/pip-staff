@@ -16,19 +16,20 @@
 {% block content %}
   <form id="form" method="post" action="check-your-answers">
 
-    <div class="govuk-width-container">
-      <main class="govuk-main-wrapper">
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">Claimant details</h1>
-            <h2 class="govuk-heading-m">Full name</h2>
-            <p class="govuk-body">Wilma Flintstone</p>
-            <h2 class="govuk-heading-m">Email address<h2>
-            <p class="govuk-body">wilma.flintstone@email.com</p>
+            <h1 class="govuk-heading-l">Wilma Flintstone</h1>
 
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-            
-            <h1 class="govuk-heading-l">Enter remaining claimant details</h1>
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Email address</th>
+                  <td class="govuk-table__cell">wilma.flintstone@email.com</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class="govuk-heading-m">Enter remaining claimant details</h2>
             <div class="govuk-form-group govuk-!-padding-bottom--6">
               <label class="govuk-label" for="national-insurance-number">
                 National Insurance number
@@ -39,13 +40,13 @@
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h1 class="govuk-label">
+                  <h1 class="govuk-label govuk-!-padding-bottom--6">
                     Date of birth
                   </h1>
                 </legend>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
-                    <div class="govuk-form-group">
+                    <div class="govuk-form-group govuk-!-margin-top--4">
                       <label class="govuk-label govuk-date-input__label" for="dob-day">
                         Day
                       </label>
@@ -79,7 +80,7 @@
               <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
             </div> <!-- govuk-form-group -->
 
-            <input type="submit" class="govuk-button govuk-!-margin-top-6" value="Continue" id="submit">
+            <input type="submit" class="govuk-button" value="Continue" id="submit">
 
           </div> <!-- govuk-grid-column-two-thirds -->
 
@@ -88,7 +89,5 @@
           </div> <!-- govuk-grid-column-one-third -->
         </div> <!-- govuk-grid-row -->
 
-      </main>
-    </div> <!-- govuk-width-container -->
   </form>
 {% endblock %}

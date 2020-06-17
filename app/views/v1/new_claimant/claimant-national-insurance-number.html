@@ -17,19 +17,14 @@
 
   <form id="form" method="post" action="check-your-answers">
 
-    <div class="govuk-width-container">
-
-      <main class="govuk-main-wrapper">
-
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-m">Claimants National Insurance number</h1>
-
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="national-insurance-number">Claimants National Insurance number?</label></h1>
               <div class="govuk-form-group govuk-!-padding-bottom--6">
                 <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint" spellcheck="false">
               </div> <!-- govuk-form-group -->
 
-            <input type="submit" class="govuk-button govuk-!-margin-top-6" value="Save and continue" id="submit">
+            <input type="submit" class="govuk-button" value="Save and continue" id="submit">
 
           </div> <!-- govuk-grid-column-two-thirds -->
 
@@ -38,8 +33,6 @@
           </div> <!-- govuk-grid-column-one-third -->
         </div> <!-- govuk-grid-row -->
 
-      </main>
-    </div> <!-- govuk-width-container -->
   </form>
 
 {% endblock %}
