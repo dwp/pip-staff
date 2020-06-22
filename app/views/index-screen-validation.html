@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+  <a href="index" class="govuk-back-link">Back to main Index</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <h2 class="govuk-heading-l">Validation messages for PIP agent UI screens</h2>
+
+
+      <p><a href="v1/new_claimant/new-claimant-search-validation-errors" class="govuk-link">New claimant search validation errors</a></p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p><a href="v1/new_claimant/new-claimant-create-validation-errors" class="govuk-link">New claimant create a record validation errors</a></p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p><a href="v1/existing_claimant/existing-claimant-search-error-screens" class="govuk-link">Existing claimant search validation errors</a></p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p><a href="v1/existing_claimant/existing-claimant-result-error-screen" class="govuk-link">Existing claimant search result validation error</a></p>
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+  </div> <!-- govuk-grid-row -->
+
+{% endblock %}
