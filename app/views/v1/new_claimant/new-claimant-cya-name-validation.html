@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Check answers claimant name
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="/index-screen-validation" class="govuk-back-link">Back to validation indes screen</a>
+{% endblock %}
+
+{% block content %}
+
+  <form id="form" method="post" action="#">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#full-name">Enter the claimants name</a>
+                </li>
+              </ul>
+            </div> <!-- govuk-error-summary__body -->
+          </div> <!-- govuk-error-summary -->
+
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="full-name">Claimants name</label></h1>
+          <div class="govuk-form-group govuk-form-group--error">
+            <span id="full-name-hint" class="govuk-hint">Include capital letters in the name where needed. <br>For example, Janet Smith-Johnson.</span>
+            <span id="passport-issued-error" class="govuk-error-message">
+              <span class="govuk-visually-hidden">Error:</span> Enter the claimants name
+            </span>
+            <input class="govuk-input govuk-input--error" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false" >
+          </div> <!-- govuk-form-group -->
+
+          <input type="submit" class="govuk-button" value="Save and continue" id="submit">
+
+        </div> <!-- govuk-grid-column-two-thirds -->
+
+        <div class="govuk-grid-column-one-third">
+
+        </div> <!-- govuk-grid-column-one-third -->
+      </div> <!-- govuk-grid-row -->
+
+  </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
