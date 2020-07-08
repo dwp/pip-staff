@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+
+{% block content %}
+  <a href="index" class="govuk-back-link">Back to main Index</a>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-m">User research scenarios for [add date]</h2>
+
+      <p>1) <a href="ur_scenarios/existing_claimant/claimant-search" class="govuk-link">Exisitng claimant - BF for assurance call, re-send invitation email</a></p>
+
+      <p>2) <a href="ur_scenarios/existing_claimant/claimant-search" class="govuk-link">Exisitng claimant - Enquiry line call, claimant hasn't received initial email, re-send invitation email</a></p>
+
+      <p>3) <a href="ur_scenarios/multiple_accounts/claimant-search" class="govuk-link">Exisitng claimant, BF for assurance call, multiple search returns, re-send invitation email</a></p>
+
+      <p>4) <a href="ur_scenarios/multiple_accounts/claimant-search" class="govuk-link">Exisitng claimant, Enquiry Line call, multiple search returns, re-send invitation email</a></p>
+
+      <p>5) <a href="ur_scenarios/new_claimant/claimant-search" class="govuk-link">Exisitng claimant, BF for assurance call, no record found, create new record, send inviation email</a></p>
+
+      <p>6) <a href="ur_scenarios/new_claimant/claimant-search" class="govuk-link">Receive new claimant list, create new record, send invitation email</a></p>
+
+      <p>7) <a href="ur_scenarios/search_validation_errors_1/claimant-search" class="govuk-link">Validation error on claimant search, incorrect email format #1</a></p>
+
+      <p>8) <a href="ur_scenarios/search_validation_errors_2/claimant-search" class="govuk-link">Validation error on claimant search, incorrect email format #2</a></p>
+
+      <p><a href="v1/validation_errors/existing-claimant-search-error-screens" class="govuk-link">Existing claimant search validation errors</a></p>
+
+      <p><a href="v1/validation_errors/existing-claimant-result-error-screen" class="govuk-link">Existing claimant search result validation error</a></p>
+
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+  </div> <!-- govuk-grid-row -->
+
+{% endblock %}
