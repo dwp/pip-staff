@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant record
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="claimant-result" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="claimant-search">
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Alton Cardenas</h1>
+
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                 <th scope="row" class="govuk-table__header">Claim date</th>
+                 <td class="govuk-table__cell">7 July 2020</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Email address</th>
+                  <td class="govuk-table__cell">alton.cardenas@email.com</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">National Insurance number</th>
+                  <td class="govuk-table__cell">MM 66 55 44 M</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                  <td class="govuk-table__cell">17 August 1984</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Postcode</th>
+                  <td class="govuk-table__cell">LS2 2SS</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Mobile number</th>
+                  <td class="govuk-table__cell">07777 222 222</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Invitation email</th>
+                  <td class="govuk-table__cell">Invitation email sent on 10 July 2020</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 class="govuk-heading-m">Submitted documents</h2>
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Submission date</th>
+                  <th scope="col" class="govuk-table__header">Uploaded to DRS</th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">No files submitted</td>
+                  <td class="govuk-table__cell">No files uploaded to DRS</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <input type="submit" class="govuk-button" value="Search for another claimant" id="submit">
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

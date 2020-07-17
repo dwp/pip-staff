@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Email confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="claimant-search">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+            <div class="govuk-panel govuk-panel--confirmation">
+              <h1 class="govuk-panel__title">
+                Email sent to Alton Cardenas
+              </h1>
+              <div class="govuk-panel__body">
+                alton.cardenas@email.com
+              </div>
+            </div> <!-- govuk-panel -->
+            <input type="submit" class="govuk-button" value="Back to search" id="submit">
+          </div> <!-- govuk-grid-column-full -->
+
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
