@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant search results
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="claimant-search" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <form id="form" method="post" action="claimant-result">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <h1 class="govuk-heading-l">Search results for Example Name</h1>
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header">Email address</th>
+                    <th scope="col" class="govuk-table__header">National Insurance number</th>
+                    <th scope="col" class="govuk-table__header">Date of claim</th>
+                    <th scope="col" class="govuk-table__header"></th>
+                  </tr>
+                </thead>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-table__cell--text">Example Name</td>
+                  <td class="govuk-table__cell govuk-table__cell--text">example@email.com</td>
+                  <td class="govuk-table__cell govuk-table__cell--text">XX XX XX XX X</td>
+                  <td class="govuk-table__cell govuk-table__cell--text">DD Month YYYY</td>
+                  <td class="govuk-table__cell govuk-table__cell--text"><a href="claimant-result-1">View record</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell govuk-table__cell--text">Example Name</td>
+                  <td class="govuk-table__cell govuk-table__cell--text">example@email.com</td>
+                  <td class="govuk-table__cell govuk-table__cell--text">XX XX XX XX X</td>
+                  <td class="govuk-table__cell govuk-table__cell--text">DD Month YYYY</td>
+                  <td class="govuk-table__cell govuk-table__cell--text"><a href="claimant-result-2">View record</a></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div> <!-- govuk-grid-column-full -->
+
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
