@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index-v2" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-m">User research scenarios for 10 September</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="ur_scenarios_2/scenario-1-send-another-email/claimant-search" class="govuk-link">Scenario #1</a>
+        </li>
+        <li>
+          <a href="ur_scenarios_2/scenario-2-multiple-accounts/claimant-search" class="govuk-link">Scenario #2</a>
+        </li>
+        <li>
+          <a href="ur_scenarios_2/scenario-3-new-claimant/claimant-search" class="govuk-link">Scenario #3</a>
+        </li>
+        <li>
+          <a href="ur_scenarios_2/scenario-4-email-error/claimant-search" class="govuk-link">Scenario #4</a>
+        </li>
+        <li>
+          <a href="ur_scenarios_2/scenario-5-email-error-2/claimant-search" class="govuk-link">Scenario #5</a>
+        </li>
+        <li>
+          <a href="ur_scenarios_2/scenario-6-notify-error/claimant-search" class="govuk-link">Scenario #6</a>
+        </li>
+      </ul>
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+  </div> <!-- govuk-grid-row -->
+
+{% endblock %}

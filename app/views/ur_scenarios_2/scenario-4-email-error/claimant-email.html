@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant email
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="check-your-answers" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <form id="form" method="post" action="check-your-answers">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="email">Claimant's email address</label></h1>
+            <div class="govuk-form-group">
+              <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false" value="keir.hodge101@email.com">
+            </div> <!-- govuk-form-group -->
+
+            <input type="submit" class="govuk-button" value="Save and continue" id="submit">
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
