@@ -9,9 +9,11 @@
   GOV.UK Prototype Kit
 {% endblock %}
 
-{% block content %}
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back to main index</a>
+{% endblock %}
 
-  <a href="index" class="govuk-back-link">Back to main index</a>
+{% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
@@ -47,9 +49,8 @@
         <div class="card-body">
           <ul class="govuk-list govuk-list--bullet">
             <li><a href="/reference_screens/existing_claimant/claimant-search">Claimant search</a></li>
-            <li><a href="/reference_screens/existing_claimant/claimant-result">Search result, what do you want to do?</a></li>
+            <li><a href="/reference_screens/existing_claimant/claimant-record">View the claimants record and resend invitation email</a></li>
             <li><a href="/reference_screens/existing_claimant/email-confirmation">Confirmation an invitation email has been re-sent</a></li>
-            <li><a href="/reference_screens/existing_claimant/claimant-record">View the claimants record</a></li>
           </ul>
         </div><!-- card-body -->
       </div><!-- card -->
@@ -71,6 +72,18 @@
           </ul>
         </div><!-- card-body -->
     <!--  </div><!-- card -->
+
+      <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Validation error messages</h2>
+        </div><!-- card-head -->
+        <div class="card-body">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="index-screen-validation" class="govuk-link">Validation and error messages index</a></li>
+          </ul>
+        </div> <!-- card-body -->
+      </div> <!-- card -->
+
 
     </div> <!-- govuk-grid-column-full -->
 </div> <!-- govuk-grid-row -->
