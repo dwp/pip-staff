@@ -32,3 +32,34 @@ $govuk-assets-path: '/govuk/assets/';
 .card-body {
   padding: 1em;
 }
+
+.thumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include govuk-font($size: 19);
+  li a {
+    margin: 0 10px 20px 0;
+    padding: 0;
+    max-width: 200px;
+    padding: 10px;
+    border: 1px solid $govuk-border-colour;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+    min-height: 150px;
+  }
+  a,
+  a:visited {
+    color: $govuk-text-colour;
+    text-decoration: none;
+    &:hover {
+      background-color: #F8F7F7;
+    }
+  }
+}
+
+.thumb {
+  width: 100%;
+  max-width: 300px;
+}
