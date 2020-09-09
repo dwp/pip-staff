@@ -21,88 +21,38 @@
 
               <h1 class="govuk-heading-l">Check the details before saving the record</h1>
 
-              <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Name
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Example Name
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="claimant-name">
-                      Change<span class="govuk-visually-hidden"> name</span>
-                    </a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Email address
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    example@email.com
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="claimant-email">
-                      Change<span class="govuk-visually-hidden"> email address</span>
-                    </a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    National Insurance number
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    XX XX XX XX X
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="claimant-national-insurance-number">
-                      Change<span class="govuk-visually-hidden"> national insurance number</span>
-                    </a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Date of birth
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    DD Month YYYY
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="claimant-dob">
-                      Change<span class="govuk-visually-hidden"> date of birth</span>
-                    </a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Postcode
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    XXX XXX
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="claimant-postcode">
-                      Change<span class="govuk-visually-hidden"> postcode</span>
-                    </a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Mobile number
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    XXXXX XXXXXX
-                  </dd>
-                  <dd class="govuk-summary-list__actions">
-                    <a class="govuk-link" href="claimant-mobile-number">
-                      Change<span class="govuk-visually-hidden"> mobile number</span>
-                    </a>
-                  </dd>
-                </div>
-              </dl>
+              <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Name</th>
+                    <td class="govuk-table__cell">Example name</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Email address</th>
+                    <td class="govuk-table__cell">example@email.com</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">National insurance number</th>
+                    <td class="govuk-table__cell">XX XXXXXX X</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Date of birth</th>
+                    <td class="govuk-table__cell">DD MM YYYY</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Postcode</th>
+                    <td class="govuk-table__cell">XXXX XXX</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Mobile number</th>
+                    <td class="govuk-table__cell">XXXXX XXXXXX</td>
+                  </tr>
+                </tbody>
+              </table>
 
-            <input type="submit" class="govuk-button" value="Save record and send email" id="submit">
+              <p><a href="create-record-2" class="govuk-link">Change</a></p>
+
+              <input type="submit" class="govuk-button" value="Save record and send email" id="submit">
 
           </div> <!-- govuk-grid-column-two-thirds -->
         </div> <!-- govuk-grid-row -->
