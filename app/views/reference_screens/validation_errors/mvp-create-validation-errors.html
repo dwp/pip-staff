@@ -26,16 +26,7 @@
               <div class="govuk-error-summary__body">
                 <ul class="govuk-list govuk-error-summary__list">
                   <li>
-                    <a href="#national-insurance-number">Enter a National Insurance number</a>
-                  </li>
-                  <li>
-                    <a href="#dob-day">Enter a date of birth</a>
-                  </li>
-                  <li>
-                    <a href="#address-postcode">Enter a postcode</a>
-                  </li>
-                  <li>
-                    <a href="#mobile-number">Enter a mobile number</a>
+                    <p>Enter the missing details</p>
                   </li>
                 </ul>
               </div> <!-- govuk-error-summary__body -->
@@ -43,10 +34,35 @@
 
             <h1 class="govuk-heading-l">Enter claimant details</h1>
 
-            
+            <div class="govuk-form-group govuk-form-group--error">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="last-name">Claimant's first name</label></h2>
+                <span id="name-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>
+                  Enter claimant's first name
+                  </span>
+              <input class="govuk-input govuk-input--error" id="first-name" name="first-name" type="text" spellcheck="false" autocomplete="name">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="last-name">Claimant's last name</label></h2>
+                <span id="name-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>
+                  Enter claimant's last name
+                  </span>
+              <input class="govuk-input govuk-input--error" id="last-name" name="last-name" type="text" spellcheck="false" autocomplete="name">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group govuk-form-group--error">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="email-address">Claimant's email address</label></h2>
+                <span id="name-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span>
+                  Enter claimants email address
+                  </span>
+              <input class="govuk-input govuk-input--error" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+            </div> <!-- govuk-form-group -->
 
             <!-- <h2 class="govuk-heading-m">Enter claimant details</h2> -->
-            <div class="govuk-form-group govuk-!-padding-bottom--6 govuk-form-group--error">
+            <div class="govuk-form-group govuk-form-group--error">
               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's National Isurance number</label></h2>
               <span id="name-error" class="govuk-error-message">
                 <span class="govuk-visually-hidden">Error:</span>
@@ -115,13 +131,100 @@
 
             <input type="submit" class="govuk-button" value="Continue" id="submit">
 
+           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
+           <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+             <h2 class="govuk-error-summary__title" id="error-summary-title">
+               There is a problem
+             </h2>
+             <div class="govuk-error-summary__body">
+               <ul class="govuk-list govuk-error-summary__list">
+                 <li>
+                   <p>Enter the missing details</p>
+                 </li>
+               </ul>
+             </div> <!-- govuk-error-summary__body -->
+           </div> <!-- govuk-error-summary -->
 
-            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+           <h1 class="govuk-heading-l">Enter claimant details</h1>
 
+           <div class="govuk-form-group">
+             <label class="govuk-label govuk-label--s" for="first-name">
+               Claimant's first name
+             </label>
+             <input class="govuk-input" id="first-name" name="first-name" type="text" spellcheck="false" autocomplete="name">
+           </div> <!-- govuk-form-group -->
 
+           <div class="govuk-form-group">
+             <label class="govuk-label govuk-label--s" for="last-name">
+               Claimant's last name
+             </label>
+             <input class="govuk-input" id="last-name" name="last-name" type="text" spellcheck="false" autocomplete="name">
+           </div> <!-- govuk-form-group -->
 
-            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+           <div class="govuk-form-group">
+             <label class="govuk-label govuk-label--s" for="email">
+               Claimant's Email address
+             </label>
+             <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+           </div> <!-- govuk-form-group -->
+
+           <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="national-insurance-number">Claimant's National Insurance number</label></h2>
+             <!--<label class="govuk-label" for="address-postcode">Postcode</label> -->
+             <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint" spellcheck="false">
+           </div> <!-- govuk-form-group -->
+
+           <div class="govuk-form-group">
+             <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                 <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's date of birth</label></h2>
+                 <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
+               </legend>
+               <div class="govuk-date-input" id="dob">
+                 <div class="govuk-date-input__item">
+                   <div class="govuk-form-group govuk-!-margin-top--4">
+                     <label class="govuk-label govuk-date-input__label" for="dob-day">
+                       Day
+                     </label>
+                     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
+                   </div>
+                 </div>
+                 <div class="govuk-date-input__item">
+                   <div class="govuk-form-group">
+                     <label class="govuk-label govuk-date-input__label" for="dob-month">
+                       Month
+                     </label>
+                     <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric">
+                   </div>
+                 </div>
+                 <div class="govuk-date-input__item">
+                   <div class="govuk-form-group">
+                     <label class="govuk-label govuk-date-input__label" for="dob-year">
+                       Year
+                     </label>
+                     <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric">
+                   </div>
+                 </div>
+               </div>
+             </fieldset>
+           </div> <!-- govuk-form-group -->
+
+           <div class="govuk-form-group">
+             <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's postcode</label></h2>
+             <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
+             <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code">
+           </div> <!-- govuk-form-group -->
+
+           <div class="govuk-form-group">
+             <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's mobile number</label></h2>
+             <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
+             <input class="govuk-input govuk-input--width-10" id="width-10" name="width-10" type="text">
+           </div> <!-- govuk-form-group -->
+
+           <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+  <!--          <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
               <h2 class="govuk-error-summary__title" id="error-summary-title">
                 There is a problem
               </h2>
@@ -141,11 +244,11 @@
                   </li>
                 </ul>
               </div> <!-- govuk-error-summary__body -->
-            </div> <!-- govuk-error-summary -->
+    <!--        </div> <!-- govuk-error-summary -->
 
 
 
-            <h1 class="govuk-heading-l">Example Name</h1>
+    <!--        <h1 class="govuk-heading-l">Example Name</h1>
 
             <table class="govuk-table">
               <tbody class="govuk-table__body">
@@ -165,12 +268,12 @@
               <input class="govuk-input govuk-input--width-10 govuk-input--error" id="national-insurance-number-1" name="national-insurance-number-1" type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="XX XX XX X">
             </div> <!-- govuk-form-group -->
 
-            <div class="govuk-form-group  govuk-form-group--error">
+  <!--          <div class="govuk-form-group  govuk-form-group--error">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                   <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="dob-day-1">Claimant's date of birth</label></h2>
                   <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
-                </legend>
+  <!--              </legend>
                 <span id="dob-error" class="govuk-error-message">
                   <span class="govuk-visually-hidden">Error:</span>
                   Enter a valid date of birth
@@ -204,7 +307,7 @@
               </fieldset>
             </div> <!-- govuk-form-group -->
 
-            <div class="govuk-form-group govuk-form-group--error">
+  <!--          <div class="govuk-form-group govuk-form-group--error">
               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's postcode</label></h2>
               <span id="postcode-error" class="govuk-error-message">
                 <span class="govuk-visually-hidden">Error:</span>
@@ -213,7 +316,7 @@
               <input class="govuk-input govuk-input--width-10 govuk-input--error" id="address-postcode-1" name="address-postcode-1" type="text" autocomplete="postal-code" value="X XX XX X">
             </div> <!-- govuk-form-group -->
 
-            <div class="govuk-form-group govuk-form-group--error">
+  <!--          <div class="govuk-form-group govuk-form-group--error">
               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="mobile-number-1">Claimant's mobile number</label></h2>
               <span id="postcode-error" class="govuk-error-message">
                 <span class="govuk-visually-hidden">Error:</span>
@@ -222,7 +325,7 @@
               <input class="govuk-input govuk-input--width-10 govuk-input--error" id="mobile-number-1" name="mobile-number-1" type="text" value="XXX XXX X">
             </div> <!-- govuk-form-group -->
 
-            <input type="submit" class="govuk-button" value="Continue" id="submit">
+  <!--          <input type="submit" class="govuk-button" value="Continue" id="submit"> -->
 
           </div> <!-- govuk-grid-column-two-thirds -->
 
