@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Failure error
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Sorry, there is a problem</h1>
+
+            <p>The invitation email was not sent.</p>
+            <p>Check the claimant details have been saved by calling [telephone number]</p>
+            <p>If the details have been saved try sending the email again.</p>
+
+
+            <a href="#" class="govuk-button">Send email</a>
+
+            <p>If you keep seeing this error, email <a href="mailto:help@email.com?subject=Email a PIP2 form – Notify error&body=There is an issue with the ‘Email a PIP2 form and the Notify service">email address</a>.</p>
+
+            <p><a href="/new-mvp/creat-record" class="govuk-link">Create a new record</a></p>
+
+        </div> <!-- govuk-grid-column-two-thrids -->
+
+      </div> <!-- govuk-grid-row -->
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
