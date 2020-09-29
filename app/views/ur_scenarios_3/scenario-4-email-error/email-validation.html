@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant email
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="claimant-search" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <form id="form" method="post" action="no-claimant-result">
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+            <h2 class="govuk-error-summary__title" id="error-summary-title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#email">Enter an email address in the correct format</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h1 class="govuk-heading-l">Search for a claimant</h1>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="full-name">
+                Full name
+              </label>
+              <span id="full-name-hint" class="govuk-hint">Include capital letters in the name where needed. <br>For example, Janet Smith-Johnson.</span>
+              <input class="govuk-input" id="full-name" name="full-name" type="text" autocomplete="name" spellcheck="false" value="Keir Hodge">
+            </div> <!-- govuk-form-group -->
+            <div class="govuk-form-group govuk-form-group--error">
+              <label class="govuk-label" for="email">
+                Email address
+              </label>
+              <span id="email-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> Enter an email address in the correct format, like name@example.com
+              </span>
+              <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" autocomplete="email" spellcheck="false" value="keir.hodge101atemail.com">
+            </div> <!-- govuk-form-group -->
+            <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+        </div> <!-- govuk-grid-column-two-thirds -->
+
+        <div class="govuk-grid-column-one-third">
+
+        </div> <!-- govuk-grid-column-one-third -->
+      </div> <!-- govuk-grid-row -->
+
+  </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

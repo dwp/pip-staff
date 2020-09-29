@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create record confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Sorry, there is a problem</h1>
+
+            <p>The invitation email was not sent. This is due to a technical problem with the email service.</p>
+            <p>The details you have entered have been saved.</p>
+
+            <a href="notify-error-2" class="govuk-button">Try sending the email again</a>
+
+            <p>If you keep seeing this error, email <a href="mailto:help@email.com?subject=Email a PIP2 form – Notify error&body=There is an issue with the ‘Email a PIP2 form and the Notify service">notify.help@gov.uk</a>.</p>
+        </div> <!-- govuk-grid-column-two-thrids -->
+
+      </div> <!-- govuk-grid-row -->
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

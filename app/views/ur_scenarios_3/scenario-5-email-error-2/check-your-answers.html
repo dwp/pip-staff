@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create record confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="create-record" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="create-confirmation">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+              <h1 class="govuk-heading-l">Check the details before saving the record</h1>
+
+              <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Name</th>
+                    <td class="govuk-table__cell">Priscilla Valenzuela</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Email address</th>
+                    <td class="govuk-table__cell">pricsilla.valenzuela@hoymail.com</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">National insurance number</th>
+                    <td class="govuk-table__cell">YY 223344 Y</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Date of birth</th>
+                    <td class="govuk-table__cell">23 July 1961</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Postcode</th>
+                    <td class="govuk-table__cell">LS2 2BB</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Mobile number</th>
+                    <td class="govuk-table__cell">07777 888888</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p><a href="create-record-2" class="govuk-link">Change</a></p>
+
+              <input type="submit" class="govuk-button" value="Save record and send email" id="submit">
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
