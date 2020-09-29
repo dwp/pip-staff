@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a href="index-v2" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">PIP agent screens</h1>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Agent screens - new claimant</h2>
+        </div><!-- card-head -->
+        <div class="card-body">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/v3_new_mvp/create-record">Create a record - home screen</a></li>
+            <li><a href="/v3_new_mvp/check-details">Check the details</a></li>
+            <li><a href="/v3_new_mvp/create-record-2">Change any details before saving</a></li>
+            <li><a href="/v3_new_mvp/create-confirmation">Confirmation the record has been saved and invitation email sent</a></li>
+          </ul>
+        </div><!-- card-body -->
+      </div><!-- card -->
+
+    </div> <!-- govuk-grid-column-full -->
+</div> <!-- govuk-grid-row -->
+
+{% endblock %}
