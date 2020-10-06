@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-  <form id="form" method="post" action="create-confirmation">
+  <form id="form" method="post" action="email-confirmation">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -118,24 +118,11 @@
               </dd>
             </div>
 
-            <!--<div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Claim date
-              </dt>
-              <dd class="govuk-summary-list__value">
-                XX/XX/XXXX
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="create-record-2">
-
-                </a>
-              </dd>
-            </div> -->
           </dl>
 
-        <input type="submit" class="govuk-button" value="Save record and send email" id="submit">
+        <input type="submit" class="govuk-button" value="Send email" id="submit">
 
-      <!--  <p><a href="claimant-search" class="govuk-link">Search for another record</a></p> -->
+        <p><a href="claimant-search" class="govuk-link">Search for another record</a></p>
 
       </div> <!-- govuk-grid-column-two-thirds -->
     </div> <!-- govuk-grid-row -->
