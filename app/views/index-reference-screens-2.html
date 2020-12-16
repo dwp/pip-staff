@@ -1,0 +1,90 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back to main index</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Reference screens for PIP agent service</h1>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Agent screens - new claimant and resending email</h2>
+        </div><!-- card-head -->
+        <div class="card-body">
+          <!-- <p><a href="/public/pdfs/staff-ui-mvp-new-claimant.pdf">New claimant flow diagram</a></p> -->
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/post_mvp/claimant-search">Search for a record</a></li>
+          <!--  <li><a href="/reference_screens/new_claimant/no-claimant-result">Search result</a></li>
+            <li><a href="/reference_screens/new_claimant/create-record">Create new record</a></li>
+            <li><a href="/reference_screens/new_claimant/check-your-answers">Check claimant record</a></li>
+            <li><a href="/reference_screens/new_claimant/create-record-2">Change claimant details before saving and sending invitation email</a></li>
+            <li><a href="/reference_screens/new_claimant/create-confirmation">Comfirmation screen</a></li> -->
+          </ul>
+        </div><!-- card-body -->
+      </div><!-- card -->
+
+      <!-- <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Agent screens - existing claimant</h2>
+        </div><!-- card-head -->
+
+      <!--  <div class="card-body">
+          <p><a href="/public/pdfs/staff-ui-mvp-existing-claimant.pdf">Existing claimant flow diagram</a></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/reference_screens/existing_claimant/claimant-search">Claimant search</a></li>
+            <li><a href="/reference_screens/existing_claimant/claimant-record">View the claimants record and resend invitation email</a></li>
+            <li><a href="/reference_screens/existing_claimant/email-confirmation">Confirmation an invitation email has been re-sent</a></li>
+          </ul>
+        </div><!-- card-body -->
+    <!--  </div><!-- card -->
+
+    <!--  <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Agent screens - multiple claimant records</h2>
+        </div><!-- card-head -->
+    <!--    <div class="card-body">
+          <p><a href="/public/pdfs/staff-ui-mvp-multiple-claimant-search-results.pdf">New claimant flow diagram</a></p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/v1/multiple_accounts/claimant-search">Claimant search</a></li>
+            <li><a href="/v1/multiple_accounts/multiple-search-results">Search returns multiple records</a></li>
+            <li><a href="/v1/multiple_accounts/claimant-result-1">Claimant #1, what do you want to do?</a></li>
+            <li><a href="/v1/multiple_accounts/email-confirmation">Claimant #1, confirmation another email has been sent</a></li>
+            <li><a href="/v1/multiple_accounts/claimant-record-1">Claimant #1, view the claimants record</a></li>
+            <li><a href="/v1/multiple_accounts/claimant-result-2">Claimant #2, what do you want to do?</a></li>
+            <li><a href="/v1/multiple_accounts/email-confirmation">Claimant #2, confirmation another email has been sent</a></li>
+            <li><a href="/v1/multiple_accounts/claimant-record-2">Claimant #2, view the claimants record</a></li>
+          </ul>
+        </div><!-- card-body -->
+    <!--  </div><!-- card -->
+
+      <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Validation error messages</h2>
+        </div><!-- card-head -->
+        <div class="card-body">
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="index-screen-validation" class="govuk-link">Validation and error messages index</a></li>
+          </ul>
+        </div> <!-- card-body -->
+      </div> <!-- card -->
+
+
+    </div> <!-- govuk-grid-column-full -->
+</div> <!-- govuk-grid-row -->
+
+{% endblock %}
