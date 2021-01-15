@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create record confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="create-record" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="email-confirmation">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check the details before saving the record</h1>
+
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">National insurance number</th>
+              <td class="govuk-table__cell">XXXXXXXXX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Fist name</th>
+              <td class="govuk-table__cell">XXXXXXXXX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Last name</th>
+              <td class="govuk-table__cell">XXXXXXXX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Email address</th>
+              <td class="govuk-table__cell">XXXXXX@XXXX.XXX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Date of birth</th>
+              <td class="govuk-table__cell">XX XX XXXX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Postcode</th>
+              <td class="govuk-table__cell">XXXX XXX</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mobile number</th>
+              <td class="govuk-table__cell">XXXXX XXXXXX</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><a href="create-record-2" class="govuk-link">Change</a></p>
+
+        <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Save record and send email" id="submit">
+
+      </div> <!-- govuk-grid-column-two-thirds -->
+    </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
