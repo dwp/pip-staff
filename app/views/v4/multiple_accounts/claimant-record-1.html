@@ -10,151 +10,64 @@
 
 {% block beforeContent %}
   {% include "includes/beta-banner.html" %}
-  <a href="multiple-search-results" class="govuk-back-link">Back</a>
+  <a href="claimant-search" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
   <form id="form" method="post" action="email-confirmation">
 
 
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">Claimant record</h1>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Claimant record</h1>
 
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              National Insurance number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XX XXXXXX X
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> national insurance number</span>
-              </a>
-            </dd>
-          </div>
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Fist name</th>
+                  <td class="govuk-table__cell">XXXXXXXXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Last name</th>
+                  <td class="govuk-table__cell">XXXXXXXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Email address</th>
+                  <td class="govuk-table__cell">XXXXXX@XXXX.XXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">National insurance number</th>
+                  <td class="govuk-table__cell">XXXXXXXXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                  <td class="govuk-table__cell">XX XX XXXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Postcode</th>
+                  <td class="govuk-table__cell">XXXX XXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Mobile number</th>
+                  <td class="govuk-table__cell">XXXXX XXXXXX</td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Invitation email</th>
+                  <td class="govuk-table__cell">Last email sent on DD MONTH YYYY MM:HH</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              First name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XXXX
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> first name</span>
-              </a>
-            </dd>
-          </div>
+            <p><a href="claimant-record-1-change" class="govuk-link">Change</a></p>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Last name
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XXXXXXXXXX
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> last name</span>
-              </a>
-            </dd>
-          </div>
+            <input type="submit" class="govuk-button" value="Send another invitation email" id="submit">
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Email address
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XXXX.XXX@XXX.XXX
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> email address</span>
-              </a>
-            </dd>
-          </div>
+            <p><a href="claimant-search" class="govuk-link">Search for another claimant</a></p>
 
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Date of birth
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XX/XX/XXXX
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> date of birth</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Postcode
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XXXX XXX
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> postcode</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Mobile number
-            </dt>
-            <dd class="govuk-summary-list__value">
-              XXXXX XXXXXX
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="create-record-1">
-                Change<span class="govuk-visually-hidden"> mobile number</span>
-              </a>
-            </dd>
-          </div>
+          <div class="govuk-grid-column-one-third">
 
-        <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              PIP 1 completed
-            </dt>
-            <dd class="govuk-summary-list__value">
-
-            </dd>
-            <dd class="govuk-summary-list__value">
-                XX/XX/XXXX
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Last invitation email sent
-              </dt>
-              <dd class="govuk-summary-list__value">
-
-              </dd>
-              <dd class="govuk-summary-list__value">
-                <a class="govuk-link">
-                  XX/XX/XXXX XX:XX:XX
-                </a>
-              </dd>
-            </div>
-        </dl>
-
-        <input type="submit" class="govuk-button" value="Send another email" id="submit">
-
-        <p><a href="claimant-search" class="govuk-link">Search for another claimant</a></p>
-
-      </div> <!-- govuk-grid-column-two-thirds -->
-
-      <div class="govuk-grid-column-one-third">
-
-      </div> <!-- govuk-grid-column-one-third -->
-    </div> <!-- govuk-grid-row -->
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
 
   </form>
 {% endblock %}
