@@ -10,11 +10,11 @@
 
 {% block beforeContent %}
   {% include "includes/beta-banner.html" %}
-  <a href="create-record" class="govuk-back-link">Back</a>
+  {% include "includes/back-link.html" %}
 {% endblock %}
 
 {% block content %}
-  <form id="form" method="post" action="email-confirmation">
+  <form id="form" method="post" action="failure-error-email">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -38,7 +38,7 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Email address</th>
               <td class="govuk-table__cell">XXXXXX@XXXX.XXX</td>
-            </tr>          
+            </tr>            
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Date of birth</th>
               <td class="govuk-table__cell">XX XX XXXX</td>
