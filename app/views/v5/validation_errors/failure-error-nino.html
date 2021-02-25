@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Failure error
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+          <h1 class="govuk-heading-l">Sorry, there is a problem</h1>
+
+            <p>The record could not be saved because the National Insurance number already exists.</p>
+
+            <p><a href="#" class="govuk-link govuk-link--no-visited-state">Go back</a> and check the details.</p>
+
+        </div> <!-- govuk-grid-column-two-thrids -->
+
+      </div> <!-- govuk-grid-row -->
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

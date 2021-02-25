@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant search result
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="/index-screen-validation" class="govuk-back-link">Back to validation index screen</a>
+{% endblock %}
+
+{% block content %}
+
+  <form id="form" method="post" action="#">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+              <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                <h2 class="govuk-error-summary__title" id="error-summary-title">
+                  There is a problem
+                </h2>
+                <div class="govuk-error-summary__body">
+                  <ul class="govuk-list govuk-error-summary__list">
+                    <li>
+                      <a href="#changed-name-1">Select to send another email, or view claimant record</a>
+                    </li>
+                  </ul>
+                </div> <!-- govuk-error-summary__body -->
+              </div> <!-- govuk-error-summary -->
+
+              <h1 class="govuk-heading-l">An email was sent to Example Name on DD Month YYYY</h1>
+              <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset " aria-describedby="changed-name-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">What do you need to do?</h2>
+                  </legend>
+                  <span id="nationality-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Select to send another email, or view claimant record
+                  </span>
+                  <div class="govuk-radios govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name-1" name="changed-name-1" type="radio" value="yes">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                        Send another email
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name-2" name="changed-name-2" type="radio" value="no">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                        View claimant record
+                      </label>
+                    </div>
+                  </div> <!-- govuk-radios govuk-radios -->
+                </fieldset>
+              </div> <!-- govuk-form-group -->
+
+              <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    $(document).on('ready',function()
+    {
+      // target the #form element
+      // attached an event listener that runs
+      // a function when the form is submitted
+      $('#form').on('submit', function(e)
+      {
+        // depending on the value="" of the <input>
+        // that's been checked, change the action=""
+        // of the <form> and then allow it to submit.
+      	switch($('input[name="changed-name"]:checked').val())
+        {
+      		case 'yes':
+      	    $('#form').attr('action','email-confirmation');
+      		  break;
+          case 'no':
+      	    $('#form').attr('action','claimant-record');
+        }
+        // if nothing is ticked submit the form to error screen.
+        // returning 'true' allows the form to submit
+        // after we're finished with the above.
+        return true;
+      });
+    });
+  </script>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
