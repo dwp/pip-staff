@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back to main index</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">PIP agent screens</h1>
+
+      <h2 class="govuk-heading-l">Prototypes for PIP agents UI service</h2>
+      <p>Testing the reveal for searching on email</p>
+      <p>Testing the errors for saving when the database errors and Notify fails</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p><a href="/v6/new_claimant_notify_error/claimant-search" class="govuk-link">New claimant journey, notify failure error</a></p>
+      <p><a href="/v6/new_claimant_save_database_error/claimant-search" class="govuk-link">New claimant journey, database save record error</a></p>
+      <p><a href="/v6/existing_claimant_notify_error/claimant-search" class="govuk-link">Exisitng claimant send another email, notify failure error</a></p>
+      <p><a href="/v6/existing_claimant_save_database_error/claimant-search" class="govuk-link">Exisitng claimant, database save update error</a></p>
+      <p><a href="/v6/existing_claimant_no_nino_edit_email/claimant-search" class="govuk-link">Search for a reord on email and edit the record</a></p> 
+      <p><a href="/v6/existing_claimant_no_nino_no_record/claimant-search" class="govuk-link">Search for a reord on email and no record exists</a></p> 
+      
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <!-- <p><a href="index-list-of-screens-5" class="govuk-link">Full list of screens for the PIP Apply agent service</a></p>
+     <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p><a href="index-screen-validation" class="govuk-link">Validation and error messages index</a></p> -->
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+{% endblock %}
