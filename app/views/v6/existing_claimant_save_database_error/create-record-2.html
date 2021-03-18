@@ -23,7 +23,7 @@
 
             <div class="govuk-form-group govuk-!-padding-bottom--6">
                <h2 class="govuk-label-wrapper" ><label class="govuk-label govuk-label--s" for="national-insurance-number" id="national-insurance-number">Claimant's National Insurance number</label></h2>
-              <input class="govuk-input govuk-input--width-10"  type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="XXXXXX" disabled>
+              <input class="govuk-input govuk-input--width-10"  type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{{ data['search'] }}" disabled>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
@@ -31,7 +31,7 @@
                 Claimant's first name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
-              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="VVVVVVV" disabled>
+              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="Bryan" disabled>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
@@ -39,14 +39,14 @@
                 Claimant's last name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
-              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="TTTTTTTTT" disabled>
+              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="Hassan" disabled>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
               <label class="govuk-label govuk-label--s" for="email" id="email" >
                 Claimant's email address
               </label>
-              <input class="govuk-input"  name="email" type="email" spellcheck="false" aria-describedby="email-hint" value="vvv.ttt@email.com">
+              <input class="govuk-input"  name="email" type="email" spellcheck="false" aria-describedby="email-hint" value="byran.hassan@emaul.com">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
@@ -93,7 +93,7 @@
             <div class="govuk-form-group">
               <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="mobile-number" for="mobile-number">Claimant's mobile number</label></h2>
               <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
-              <input class="govuk-input govuk-input--width-10" name="mobile-number"  type="text" value="00000000000" disabled>
+              <input class="govuk-input govuk-input--width-10" name="mobile-number"  type="text" value="07777777777" disabled>
             </div> <!-- govuk-form-group -->
 
             <input type="submit" class="govuk-button" value="Save and continue" id="submit">

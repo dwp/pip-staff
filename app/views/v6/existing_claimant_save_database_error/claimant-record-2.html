@@ -25,22 +25,22 @@
               <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">National insurance number</th>
-                  <td class="govuk-table__cell">XXXXXXXX</td>
+                  <td class="govuk-table__cell">{{ data['search'] }}</td>
                   <td class="govuk-table__cell"></td>                 
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">First name</th>
-                  <td class="govuk-table__cell">VVVVVVVV</td>
+                  <td class="govuk-table__cell">Bryan</td>
                   <td class="govuk-table__cell"></td> 
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Last name</th>
-                  <td class="govuk-table__cell">TTTTTTTT</td>
+                  <td class="govuk-table__cell">Hassan</td>
                   <td class="govuk-table__cell"></td> 
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Email address</th>
-                  <td class="govuk-table__cell">vvv.ttt@email.com</td>
+                  <td class="govuk-table__cell">{{ data['email'] }}</td>
                   <td class="govuk-table__cell"><a href="create-record-2">Edit</a></td> 
                 </tr>
                 <tr class="govuk-table__row">
@@ -55,13 +55,11 @@
                 </tr>
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Mobile number</th>
-                  <td class="govuk-table__cell">00000000000</td>
+                  <td class="govuk-table__cell">07777777777</td>
                   <td class="govuk-table__cell"></td> 
                 </tr>
               </tbody>
             </table>
-
-            <p><a href="create-record-2" class="govuk-link">Change email address</a></p> 
 
             <input type="submit" class="govuk-button" value="Send another email" id="submit">
 
