@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create record confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="email-confirmation">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check the details before sending the invitation email</h1>
+
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">National insurance number</th>
+              <td class="govuk-table__cell">FF123456F</td>
+              <td class="govuk-table__cell"></td>                 
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">First name</th>
+              <td class="govuk-table__cell">Kayley</td>
+              <td class="govuk-table__cell"></td> 
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Last name</th>
+              <td class="govuk-table__cell">Freeman</td>
+              <td class="govuk-table__cell"></td> 
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Email address</th>
+              <td class="govuk-table__cell">kylie.freeman@email.com</td>
+              <td class="govuk-table__cell"><a href="create-record-2">Edit</a></td> 
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Date of birth</th>
+              <td class="govuk-table__cell">11 November 1999</td>
+              <td class="govuk-table__cell"></td> 
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Postcode</th>
+              <td class="govuk-table__cell">LS1 1AA</td>
+              <td class="govuk-table__cell"></td> 
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mobile number</th>
+              <td class="govuk-table__cell">00000000000</td>
+              <td class="govuk-table__cell"></td> 
+            </tr>
+           <!-- <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Invitation email</th>
+              <td class="govuk-table__cell">Last email sent on 12 March 2021 15:22:46</td>
+              <td class="govuk-table__cell"></td> 
+            </tr> -->
+          </tbody>
+        </table>
+
+        <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitaion email" id="submit">
+        
+        <p><a href="claimant-search" class="govuk-link">Search for another claimant</a></p>
+
+      </div> <!-- govuk-grid-column-two-thirds -->
+    </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

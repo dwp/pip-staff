@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create claimant record
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="claimant-record-2">
+
+        <h1 class="govuk-heading-l">Enter claimant details</h1>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group govuk-!-padding-bottom--6">
+               <h2 class="govuk-label-wrapper" ><label class="govuk-label govuk-label--s" for="national-insurance-number" id="national-insurance-number">Claimant's National Insurance number</label></h2>
+              <input class="govuk-input govuk-input--width-10"  type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="PP123456P" disabled>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="first-name" id="first-name">
+                Claimant's first name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
+              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="Callinicus" disabled>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="last-name" id="last-name" >
+                Claimant's last name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
+              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="Stidolph" disabled>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="email" id="email" >
+                Claimant's email address
+              </label>
+              <input class="govuk-input"  type="email" spellcheck="false" aria-describedby="email-hint" name="email" value="calliniuss.stitdolph@email.com">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's date of birth</label></h2>
+                  <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
+                </legend>
+                <div class="govuk-date-input" id="dob">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group govuk-!-margin-top--4">
+                      <label class="govuk-label govuk-date-input__label" for="dob-day" id="dob-day">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" name="dob-day" type="text" autocomplete="bday-day" value="22" disabled>
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-month">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" value="12" disabled>
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-year">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" value="1989" disabled>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="address-postcode" for="address-postcode">Claimant's postcode</label></h2>
+              <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
+              <input class="govuk-input govuk-input--width-10" name="address-postcode" type="text" autocomplete="postal-code" value="LS2 7UA" disabled>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="mobile-number" for="mobile-number">Claimant's mobile number</label></h2>
+              <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
+              <input class="govuk-input govuk-input--width-10" name="mobile-number"  type="text" value="07777 777777" disabled>
+            </div> <!-- govuk-form-group -->
+
+            <input type="submit" class="govuk-button" value="Save and continue" id="submit">
+           <a href="claimant-record" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
