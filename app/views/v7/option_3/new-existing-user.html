@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+New or exisitng claimant
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+ 
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form id="form" method="post" action="pip-service-choice">
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Is the claimant?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="new-existing-1" name="new-existing" type="radio" value="New">
+              <label class="govuk-label govuk-radios__label" for="new-existing-1">
+                New to the PIP Apply digital service
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="new-existing-2" name="new-existing" type="radio" value="Existing">
+              <label class="govuk-label govuk-radios__label" for="new-existing-2">
+                Existing to the PIP Apply digital service
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+      <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+    </form>
+
+   
+
+  </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
