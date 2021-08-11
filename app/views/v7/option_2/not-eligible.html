@@ -11,12 +11,12 @@ New or exisitng claimant
 
 {% block beforeContent %}
 {% include "includes/beta-banner.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
 
-            <form id="form">
+            <form id="form" method="post" action="new-existing-user">
             <input type="hidden" value="{{data['destination']}}" name="destination">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
@@ -58,7 +58,7 @@ New or exisitng claimant
                     </a> -->
                     {% endif %}
 
-                    
+
                     <p class="govuk-body-l">This is because you do not expect your ability to do everyday tasks or get
                     around to be affected for at least another 9 months.</p>
                     <p>PIP is for people with a long term health condition or disability who need help with extra costs to do
@@ -68,13 +68,15 @@ New or exisitng claimant
                     class="govuk-button govuk-!-margin-top-3" data-module="govuk-button">
                     See what other benefits are available
                     </a> -->
-                    <p>Go to GOV.UK and search for 'Benefits and financial support if you're disbaled or have a health condition.</p>
+                    <p>Find out what other benefits are available at <a href="www.gov.uk/browse/benefits/disability" class="govuk-link">www.gov.uk/browse/benefits/disability</a></p>
 
                 </ul>
 
-               <p>You can still apply for PIP using the telephony channel. </a></p> 
+               <p>Do you still want to apply for PIP?</p>
 
-                <p><a href="new-existing-user" class="govuk-link">Start again</a></p>
+               <input type="submit" class="govuk-button govuk-!-margin-top-6" value="Start again" id="submit">
+
+              
 
                 </div> <!-- govuk-grid-column-two-thirds -->
             </div> <!-- govuk-grid-column-two-thirds -->
@@ -84,4 +86,4 @@ New or exisitng claimant
 {% endblock %}
 
 {% block footer %}
-{% endblock %}            
+{% endblock %}
