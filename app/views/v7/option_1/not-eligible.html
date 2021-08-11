@@ -11,7 +11,7 @@ New or exisitng claimant
 
 {% block beforeContent %}
 {% include "includes/beta-banner.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -21,12 +21,12 @@ New or exisitng claimant
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
                 <h1 class="govuk-heading-l">
-                    Based on their answers, they would not get Personal Independence Payment (PIP)
+                    Based on your answers, you would not get Personal Independence Payment (PIP)
                 </h1>
                 <ul class="govuk-list govuk-list">
 
                     {% if data['age'] == 'under 16' %}
-                    <p class="govuk-body-l">This is because they're under 16 years old. PIP is only for people who are aged 16 or
+                    <p class="govuk-body-l">This is because you're under 16 years old. PIP is only for people who are aged 16 or
                     over.</p>
                     <!-- <p>You might be able to get Disability Living Allowance for children instead. This is to help with extra costs
                     for children under 16 who need help to do everyday tasks or get around.</p>
@@ -37,7 +37,7 @@ New or exisitng claimant
                     {% endif %}
 
                     {% if data['over-spa'] == 'No' %}
-                    <p class="govuk-body-l">This is because they're over State Pension age. PIP is only for people who
+                    <p class="govuk-body-l">This is because you're over State Pension age. PIP is only for people who
                     are under State Pension age.</p>
                     <!-- <p>You might be be able to get Attendance Allowance instead. This is for people who have reached State Pension
                     age and need help with extra costs to do everyday tasks or get around.</p>
@@ -84,4 +84,4 @@ New or exisitng claimant
 {% endblock %}
 
 {% block footer %}
-{% endblock %}            
+{% endblock %}
