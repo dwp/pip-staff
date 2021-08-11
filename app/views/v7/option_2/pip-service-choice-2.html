@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+PIP Apply service choice
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+<a href="#" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="form" method="post" action="#">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which PIP Apply service do they need?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="pip-service-1" name="pip-service" type="radio"
+                                value="Old">
+                            <label class="govuk-label govuk-radios__label" for="pip-service-1">
+                                PIP Appy HTML service - Health questionnaire only
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="pip-service-2" name="pip-service" type="radio"
+                                value="New">
+                            <label class="govuk-label govuk-radios__label" for="pip-service-2">
+                                PIP Apply full service - Initial data capture and health questionnaire
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button"
+            value="Continue" id="submit">
+
+        </form>
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
