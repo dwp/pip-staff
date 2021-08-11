@@ -10,7 +10,7 @@ New or exisitng claimant
 
 {% block beforeContent %}
 {% include "includes/beta-banner.html" %}
- 
+
 {% endblock %}
 
 {% block content %}
@@ -25,20 +25,20 @@ New or exisitng claimant
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Is the claimant?
+              Is this the applicant's first invitation to use the service?
             </h1>
           </legend>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="new-existing-1" name="new-existing" type="radio" value="New">
               <label class="govuk-label govuk-radios__label" for="new-existing-1">
-                New to the PIP Apply digital service
+                Yes, I need to send an invitation email
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="new-existing-2" name="new-existing" type="radio" value="Existing">
               <label class="govuk-label govuk-radios__label" for="new-existing-2">
-                Existing to the PIP Apply digital service
+                No, the invitation email has been sent
               </label>
             </div>
           </div>
@@ -50,7 +50,7 @@ New or exisitng claimant
 
     </form>
 
-   
+
 
   </div> <!-- govuk-grid-column-two-thirds -->
 </div> <!-- govuk-grid-row -->
