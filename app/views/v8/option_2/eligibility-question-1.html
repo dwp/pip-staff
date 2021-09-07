@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+Eligibility questions
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+<a href="#" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <form id="form" method="post" action="not-eligible">
+
+      <h1 class="govuk-heading-l">No record found </br>
+        Check eligibility</h1>
+      <div class="govuk-form-group">
+
+
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              How old are you?
+            </h2>
+          </legend>
+          <!-- <div id="contact-hint" class="govuk-hint">
+                    Select one option.
+                  </div> -->
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="age-1" name="age" type="radio" value="under 16"
+                data-aria-controls="conditional-age">
+              <label class="govuk-label govuk-radios__label" for="age-1">
+                Under 16
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="age-2" name="age" type="radio" value="over 16 under pension age"
+                data-aria-controls="conditional-age-2">
+              <label class="govuk-label govuk-radios__label" for="age-2">
+                Over 16 and under State Pension age
+              </label>
+            </div>
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="age-3" name="age" type="radio" value="over state pension age"
+                data-aria-controls="conditional-age-3">
+              <label class="govuk-label govuk-radios__label" for="age-3">
+                Over state pension age
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-age-3">
+              <div class="govuk-radios govuk-radios">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h2 class="govuk-fieldset__heading">
+                    Have you had PIP or DLA payments in the last 12 months?
+                  </h2>
+                </legend>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="over-spa-1" name="over-spa" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="over-spa-1">
+                    Yes
+                  </label>
+                </div> <!-- govuk-radios__item -->
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="over-spa-2" name="over-spa" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="over-spa-2">
+                    No
+                  </label>
+                </div> <!-- govuk-radios__item -->
+
+              </div> <!-- govuk-radios govuk-radios -->
+            </div>
+
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Do you have a health condition or disability that affects your everyday living or getting aorund?
+            </h1>
+          </legend>
+          <!-- <div id="contact-hint" class="govuk-hint">
+            Select one option.
+          </div> -->
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="health-1" name="health" type="radio" value="yes"
+              data-aria-controls="conditional-health-1">
+            <label class="govuk-label govuk-radios__label" for="health-1">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-health-1">
+            <div class="govuk-radios govuk-radios">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h1 class="govuk-fieldset__heading">
+                  Will this condition or disability affect you for at least another 9 months?
+                </h1>
+              </legend>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="nine-months-1" name="nine-months" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="nine-months-1">
+                  Yes
+                </label>
+              </div> <!-- govuk-radios__item -->
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="nine-months-2" name="nine-months" type="radio"
+                  value="no">
+                <label class="govuk-label govuk-radios__label" for="nine-months-2">
+                  No
+                </label>
+              </div> <!-- govuk-radios__item -->
+
+            </div> <!-- govuk-radios govuk-radios -->
+          </div> <!-- govuk-radios__conditional -->
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="health-2" name="health" type="radio" value="no"
+                data-aria-controls="conditional-health-2">
+              <label class="govuk-label govuk-radios__label" for="health">
+                No
+              </label>
+            </div>
+
+        </fieldset>
+      </div> <!-- govuk-form-group -->
+
+      <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Continue"
+        id="submit">
+
+      <!-- <p><a href="claimant-search" class="govuk-link">Search for another claimant</a></p> -->
+    </form>
+  </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

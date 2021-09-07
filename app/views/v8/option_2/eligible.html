@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Eligible
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="#" class="govuk-back-link">Back</a>
+{% endblock %}
+
+
+{% block content %}
+  <form id="form" method="post" action="create-record">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">
+          Based on their answers they may eligible for Personal Independence Payment
+        </h1>
+
+        <p>Create a record and send out an invitation email.</p>
+
+        <input type="submit" class="govuk-button" value="Continue" id="submit">
+
+      </div> <!-- govuk-grid-column-two-thirds -->
+    </div> <!-- govuk-grid-column-two-thirds -->
+  </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
