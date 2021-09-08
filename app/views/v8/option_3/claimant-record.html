@@ -10,7 +10,7 @@
 
 {% block beforeContent %}
   {% include "includes/beta-banner.html" %}
-  <a href="create-record" class="govuk-back-link">Back</a>
+  <a href="claimant-search" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -25,7 +25,7 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">National insurance number</th>
-              <td class="govuk-table__cell">{{ data['national-insurance-number'] }}</td>
+              <td class="govuk-table__cell">{{ data['search-3'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
@@ -58,6 +58,16 @@
               <td class="govuk-table__cell">07777777777</td>
               <td class="govuk-table__cell"></td>
             </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Service type offered</th>
+              <td class="govuk-table__cell">Full service &ndash; initial data gather (PIP 1) and health questionnaire (PIP2)</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Invitation email</th>
+              <td class="govuk-table__cell">Last email sent on 06 September 2021 &ndash; 13:45:56</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
           </tbody>
         </table>
 
@@ -65,7 +75,7 @@
 
         <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitation email" id="submit">
 
-        <p><a href="new-existing-user.html" class="govuk-link">Start again</a></p>
+        <p><a href="pip-service-choice" class="govuk-link">Start again</a></p>
 
       </div> <!-- govuk-grid-column-two-thirds -->
     </div> <!-- govuk-grid-row -->
