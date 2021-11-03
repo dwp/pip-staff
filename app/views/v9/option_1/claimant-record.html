@@ -41,8 +41,7 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Email address</th>
               <td class="govuk-table__cell">{{ data['email'] }}</td>
-              <td class="govuk-table__cell"><a href="create-record-2">Edit</a></td>
-            </tr>
+              </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Date of birth</th>
               <td class="govuk-table__cell">{{ data['dob-day'] }} - {{ data ['dob-month'] }} - {{ data['dob-year'] }}</td>
@@ -61,11 +60,11 @@
           </tbody>
         </table>
 
-
+        <p><a href="create-record-2" class="govuk-link">Change</a></p>
 
         <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitation email" id="submit">
 
-        <p><a href="pip-service-choice" class="govuk-link">Start again</a></p>
+        <!-- <p><a href="pip-service-choice" class="govuk-link">Start again</a></p> -->
 
       </div> <!-- govuk-grid-column-two-thirds -->
     </div> <!-- govuk-grid-row -->
