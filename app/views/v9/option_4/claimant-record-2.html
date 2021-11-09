@@ -10,11 +10,11 @@
 
 {% block beforeContent %}
   {% include "includes/beta-banner.html" %}
-  <a href="create-record" class="govuk-back-link">Back</a>
+  <a href="create-record-2" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
-  <form id="form" method="post" action="notify-error-2">
+  <form id="form" method="post" action="email-confirmation">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -25,32 +25,32 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">National insurance number</th>
-              <td class="govuk-table__cell">{{ data['national-insurance-number'] }}</td>
+              <td class="govuk-table__cell">DD444444D</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">First name</th>
-              <td class="govuk-table__cell">Laith</td>
+              <td class="govuk-table__cell">Malcolm</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Last name</th>
-              <td class="govuk-table__cell">Murphy</td>
+              <td class="govuk-table__cell">Smith</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Email address</th>
-              <td class="govuk-table__cell">{{ data['email'] }}</td>
+              <td class="govuk-table__cell">{{ data['email-4'] }}</td>
               <td class="govuk-table__cell"><a href="create-record-2">Edit</a></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Date of birth</th>
-              <td class="govuk-table__cell">14 - 03 - 1989[</td>
+              <td class="govuk-table__cell">23 - 05 - 1997</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Postcode</th>
-              <td class="govuk-table__cell">LS2 7UA}</td>
+              <td class="govuk-table__cell">BB21 1SA</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
@@ -66,11 +66,9 @@
           </tbody>
         </table>
 
-        <p><a href="create-record" class="govuk-link">Change</a></p>
-
         <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitation email" id="submit">
 
-        <p><a href="new-existing-user.html" class="govuk-link">Start again</a></p>
+        <p><a href="claimant-search.html" class="govuk-link">Start again</a></p>
 
       </div> <!-- govuk-grid-column-two-thirds -->
     </div> <!-- govuk-grid-row -->
