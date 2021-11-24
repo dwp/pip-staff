@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+PIP Apply service choice
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+<a href="claimant-search.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="form" method="post" action="create-record">
+
+            <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1"
+              data-module="govuk-error-summary">
+              <h2 class="govuk-error-summary__title" id="error-summary-title">
+                There is a problem
+              </h2>
+              <div class="govuk-error-summary__body">
+                <ul class="govuk-list govuk-error-summary__list">
+                  <li>
+                    <a href="#pip-service-1">Select which service they will be using</a>
+                  </li>
+                </ul>
+              </div>
+            </div> <!-- govuk-error-summary -->
+
+
+            <div class="govuk-form-group govuk-form-group--error">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which service will they be using?
+                        </h1>
+                    </legend>
+                    <span id="add-support-communicating-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span>Select which service they will be using
+                      </span>
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="pip-service-1" name="pip-service" type="radio"
+                                value="Old">
+                            <label class="govuk-label govuk-radios__label" for="pip-service-1">
+                                Health questionnaire only (PIP2)
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="pip-service-2" name="pip-service" type="radio"
+                                value="New">
+                            <label class="govuk-label govuk-radios__label" for="pip-service-2">
+                                Full service &ndash; initial data gather (PIP 1) and health questionnaire (PIP2)
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button"
+            value="Continue" id="submit">
+
+        </form>
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
