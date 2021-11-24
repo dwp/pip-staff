@@ -1,0 +1,46 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back to main index</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h1 class="govuk-heading-xl">Reference screens for PIP agent service</h1>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+      <div class="card">
+        <div class="card-head">
+          <h2 class="govuk-heading-m govuk-!-margin-0">Agent screens - creating a record, viewing an exisitng record, updating an email address on an existing record, email duplication failure and NINo duplication failure.</h2>
+        </div><!-- card-head -->
+        <div class="card-body">
+          <!-- <p><a href="/public/pdfs/staff-ui-mvp-new-claimant.pdf">New claimant flow diagram</a></p> -->
+          <ul class="govuk-list govuk-list--bullet">
+            <li><a href="/reference_screens/post_mvp/it_3/new_claimant_full_service/claimant-search">New claimant full service - PIP1 and PIP2</a></li>
+            <li><a href="/reference_screens/post_mvp/it_3/new_claimant_tactical_service/claimant-search">New claimant tactical service - PIP2 only</a></li>
+            <li><a href="/reference_screens/post_mvp/it_2/new_claimant_duplicate_email/claimant-search">Create record but duplicate email</a></li>
+            <li><a href="/reference_screens/post_mvp/it_2/new_claimant_duplicate_nino/claimant-search">Create record duplicate National Insurance number</a></li>
+            <li><a href="/reference_screens/post_mvp/it_2/existing_claimant/claimant-search">Existing claimant</a></li>
+            <li><a href="/reference_screens/post_mvp/it_2/existing_claimant_change_email/claimant-search">Existing claimant - change email address</a></li>
+            <li><a href="/reference_screens/post_mvp/it_2/existing_claimant_change_email_duplicate_email/claimant-search">Existing claimant - change email address, duplicate email</a></li>
+            <li><a href="/reference_screens/post_mvp/it_2/claimant-search-validation">Claimant search validation</a></li>
+          </ul>
+        </div><!-- card-body -->
+      </div><!-- card -->
+
+    </div> <!-- govuk-grid-column-full -->
+</div> <!-- govuk-grid-row -->
+
+{% endblock %}
