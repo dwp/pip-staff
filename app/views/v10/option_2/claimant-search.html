@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant search
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  
+{% endblock %}
+
+{% block content %}
+
+  <form id="form" method="post" action="pip-service-choice">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Search for a claimant</h1>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="search">
+                Enter a National Insurance number or email address
+              </label>
+              <input class="govuk-input" id="search" name="search-2" type="text" autocomplete="name" spellcheck="false" >
+            </div> <!-- govuk-form-group -->
+
+            <input type="submit" class="govuk-button" value="Search" id="submit">
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

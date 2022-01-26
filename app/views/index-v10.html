@@ -1,0 +1,39 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back to main index</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">PIP agent screens</h1>
+
+      <h2 class="govuk-heading-l">Prototypes for PIP agents UI service</h2>
+      <p>Testing the support for new PIP Apply private beta</p>
+     
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <p><a href="/v10/option_1/claimant-search" class="govuk-link">Option 1 messaging content changes and adding hint text</a></p>
+      <p><a href="/v10/option_2/claimant-search" class="govuk-link">Option 2 messaging alternative content chnages and Radio options swapping</a></p>
+      <p><a href="/v10/option_3/claimant-search" class="govuk-link">Option 3 messaging content changes with warning pattern</a></p> 
+      <!-- <p><a href="/v9/option_4/claimant-search" class="govuk-link">Exisiting claimant  - Tactical HTML service</a></p>
+      <p><a href="/v9/option_5/claimant-search" class="govuk-link">New claimant  - Full PIP Apply service - Notify error</a></p> -->
+      
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+{% endblock %}
