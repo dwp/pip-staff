@@ -14,48 +14,50 @@ PIP Apply service choice
 {% endblock %}
 
 {% block content %}
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-        <div class="govuk-panel govuk-panel--interruption">
 
-            <fieldset class="govuk-fieldset" aria-describedby="start_new_claim">
+<form id="form" method="post" action="create-record">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <div class="govuk-panel govuk-panel--interruption">
 
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-                    <h1 class="govuk-heading-xl" id="start_new_claim">
-                        Are you sure you the claimant needs to complete the whole claim online?
-                    </h1>
-                </legend>
+                <fieldset class="govuk-fieldset" aria-describedby="start_new_claim">
 
-                <h2 class="govuk-heading-m">
-                  Only select yes if they have not completed the first stage (PIP1) over the phone.
-                </h2>
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-heading-xl" id="start_new_claim">
+                            Are you sure you the claimant needs to complete the whole claim online?
+                        </h1>
+                    </legend>
 
-                <div class="govuk-radios govuk-radios--inline govuk-!-padding-bottom-6" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="interruption-1" name="interruption" type="radio"
-                            value="yes">
-                        <label class="govuk-label govuk-radios__label" for="interruption-1">
-                            Yes
-                        </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="interruption-2" name="interruption" type="radio"
-                            value="no">
-                        <label class="govuk-label govuk-radios__label" for="interruption-2">
-                            No
-                        </label>
-                    </div>
-                </div> <!-- govuk-radios govuk-radios--inline -->
+                    <h2 class="govuk-heading-m">
+                        Only select yes if they have not completed the first stage (PIP1) over the phone.
+                    </h2>
 
-            </fieldset>
+                    <div class="govuk-radios govuk-radios--inline govuk-!-padding-bottom-6" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="interruption-1" name="interruption" type="radio"
+                                value="yes">
+                            <label class="govuk-label govuk-radios__label" for="interruption-1">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="interruption-2" name="interruption" type="radio"
+                                value="no">
+                            <label class="govuk-label govuk-radios__label" for="interruption-2">
+                                No
+                            </label>
+                        </div>
+                    </div> <!-- govuk-radios govuk-radios--inline -->
 
-            <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button"
-            value="Continue" id="submit">
+                </fieldset>
 
-        </div> <!-- govuk-panel govuk-panel--interruption -->
-    </div> <!-- govuk-grid-column-full -->
-</div> <!-- govuk-grid-row -->
+                <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button"
+                    value="Continue" id="submit">
 
+            </div> <!-- govuk-panel govuk-panel--interruption -->
+        </div> <!-- govuk-grid-column-full -->
+    </div> <!-- govuk-grid-row -->
+</form>
 
 {% endblock %}
 
