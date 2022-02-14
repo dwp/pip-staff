@@ -26,5 +26,52 @@ const router = express.Router()
 //     res.redirect('/v7/option_1/new-existing-user');
 // });
 
+/// ROUTES V10 - OPTION-5
+
+router.post('/v10/option_5/claimant-search', (req, res, next) => {
+        res.redirect('/v10/option_5/pip-service-choice');
+    });
+
+router.post('/v10/option_5/pip-service-choice', (req, res, next) => {
+    const serviceChoice = req.session.data['pip-service'];
+    if (serviceChoice === 'Old') {
+        res.redirect('/v10/option_5/create-record');
+    } else {
+        res.redirect('/v10/option_5/service-confirm');
+    }
+});
+
+router.post('/v10/option_5/service-confirm', (req, res, next) => {
+        const serviceConfirm = req.session.data['interruption'];
+        if (serviceConfirm === 'yes') {
+            res.redirect('/v10/option_5/pip-service-choice');
+        } else {
+            res.redirect('/v10/option_5/create-record');
+        }
+});
+
+/// ROUTES V10 - OPTION-6    
+
+router.post('/v10/option_6/claimant-search', (req, res, next) => {
+    res.redirect('/v10/option_6/pip-service-choice');
+});
+
+router.post('/v10/option_6/pip-service-choice', (req, res, next) => {
+const serviceChoice = req.session.data['pip-service'];
+if (serviceChoice === 'Old') {
+    res.redirect('/v10/option_6/create-record');
+} else {
+    res.redirect('/v10/option_6/service-confirm');
+}
+});
+
+router.post('/v10/option_6/service-confirm', (req, res, next) => {
+    const serviceConfirm = req.session.data['interruption'];
+    if (serviceConfirm === 'yes') {
+        res.redirect('/v10/option_6/pip-service-choice');
+    } else {
+        res.redirect('/v10/option_6/create-record');
+    }
+});
 
 module.exports = router
