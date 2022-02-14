@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-  <form id="form" method="post" action="notify-error-2">
+  <form id="form" method="post" action="email-confirmation">
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
@@ -25,52 +25,47 @@
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">National insurance number</th>
-              <td class="govuk-table__cell">{{ data['national-insurance-number'] }}</td>
+              <td class="govuk-table__cell">{{ data['search-5'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">First name</th>
-              <td class="govuk-table__cell">{{ data['first-name'] }}</td>
+              <td class="govuk-table__cell">{{ data['first-name-5-r'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Last name</th>
-              <td class="govuk-table__cell">{{ data['last-name'] }}</td>
+              <td class="govuk-table__cell">{{ data['last-name-5-r'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Email address</th>
-              <td class="govuk-table__cell">{{ data['email'] }}</td>
-              <td class="govuk-table__cell"><a href="create-record-2">Edit</a></td>
+              <td class="govuk-table__cell">{{ data['email-5-r'] }}</td>
+              <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Date of birth</th>
-              <td class="govuk-table__cell">{{ data['dob-day']['dob-month']['dob-year'] }}</td>
+              <td class="govuk-table__cell">{{ data['dob-day-5-r'] }} - {{ data ['dob-month-5-r'] }} - {{ data['dob-year-5-r'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Postcode</th>
-              <td class="govuk-table__cell">{{ data['address-postcode'] }}</td>
+              <td class="govuk-table__cell">{{ data['address-postcode-5-r'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header">Mobile number</th>
-              <td class="govuk-table__cell">{{ data['mobile'] }}</td>
+              <td class="govuk-table__cell">{{ data['mobile-5-r'] }}</td>
               <td class="govuk-table__cell"></td>
             </tr>
-           <!-- <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header">Invitation email</th>
-              <td class="govuk-table__cell">Last email sent on 12 March 2021 15:22:46</td>
-              <td class="govuk-table__cell"></td>
-            </tr> -->
           </tbody>
         </table>
 
-        <p><a href="create-record" class="govuk-link">Change</a></p>
+        <p><a href="create-record-2" class="govuk-link">Change</a></p>
 
         <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitation email" id="submit">
 
-        <p><a href="pip-service-choice" class="govuk-link">Start again</a></p>
+        <!-- <p><a href="claimant-search.html" class="govuk-link">Start again</a></p> -->
 
       </div> <!-- govuk-grid-column-two-thirds -->
     </div> <!-- govuk-grid-row -->
