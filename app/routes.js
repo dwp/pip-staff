@@ -104,4 +104,30 @@ router.post('/v10/option_7/service-confirm', (req, res, next) => {
 
 //  ROUTES END
 
+// ROUTES V10 - OPTTION-8
+
+router.post('/v10/option_8/claimant-search', (req, res, next) => {
+    res.redirect('/v10/option_8/pip-service-choice');
+});
+
+router.post('/v10/option_8/pip-service-choice', (req, res, next) => {
+const serviceChoice = req.session.data['pip-service-8'];
+if (serviceChoice === 'Old') {
+    res.redirect('/v10/option_8/create-record');
+} else {
+    res.redirect('/v10/option_8/service-confirm');
+}
+});
+
+router.post('/v10/option_8/service-confirm', (req, res, next) => {
+    const serviceConfirm = req.session.data['interruption-8'];
+    if (serviceConfirm === 'yes') {
+        res.redirect('/v10/option_8/pip-service-choice');
+    } else {
+        res.redirect('/v10/option_8/create-record');
+    }
+});
+
+// ROUTES END
+
 module.exports = router
