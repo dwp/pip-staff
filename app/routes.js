@@ -26,7 +26,7 @@ const router = express.Router()
 //     res.redirect('/v7/option_1/new-existing-user');
 // });
 
-/// ROUTES V10 - OPTION-5
+// ROUTES V10 - OPTION-5
 
 router.post('/v10/option_5/claimant-search', (req, res, next) => {
         res.redirect('/v10/option_5/pip-service-choice');
@@ -50,7 +50,9 @@ router.post('/v10/option_5/service-confirm', (req, res, next) => {
         }
 });
 
-/// ROUTES V10 - OPTION-6    
+// ROUTES END
+
+// ROUTES V10 - OPTION-6    
 
 router.post('/v10/option_6/claimant-search', (req, res, next) => {
     res.redirect('/v10/option_6/pip-service-choice');
@@ -73,5 +75,33 @@ router.post('/v10/option_6/service-confirm', (req, res, next) => {
         res.redirect('/v10/option_6/create-record');
     }
 });
+
+// ROUTES END
+
+// ROUTES V10 - OPTION-7
+
+router.post('/v10/option_7/claimant-search', (req, res, next) => {
+    res.redirect('/v10/option_7/pip-service-choice');
+});
+
+router.post('/v10/option_7/pip-service-choice', (req, res, next) => {
+const serviceChoice = req.session.data['pip-service-7'];
+if (serviceChoice === 'Old') {
+    res.redirect('/v10/option_7/create-record');
+} else {
+    res.redirect('/v10/option_7/service-confirm');
+}
+});
+
+router.post('/v10/option_7/service-confirm', (req, res, next) => {
+    const serviceConfirm = req.session.data['interruption-7'];
+    if (serviceConfirm === 'yes') {
+        res.redirect('/v10/option_7/pip-service-choice');
+    } else {
+        res.redirect('/v10/option_7/create-record');
+    }
+});
+
+//  ROUTES END
 
 module.exports = router

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+PIP Apply service choice
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+<a href="claimant-search.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form id="form" method="post" action="#">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+                    <div class="govuk-warning-text ">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text ">
+                            <span class="govuk-warning-text__assistive ">Warning</span>
+                            Has the claimant completed the first stage (PIP1) over the phone?
+                        </strong>
+                    </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="interruption-7" name="interruption-7" type="radio"
+                                value="yes">
+                            <label class="govuk-label govuk-radios__label" for="interruption-7">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="interruption-7" name="interruption-7" type="radio"
+                                value="no">
+                            <label class="govuk-label govuk-radios__label" for="interruption-7">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Continue"
+                id="submit">
+
+
+        </div> <!-- govuk-grid-column-full -->
+    </div> <!-- govuk-grid-row -->
+</form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
