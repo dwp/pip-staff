@@ -130,4 +130,34 @@ router.post('/v10/option_8/service-confirm', (req, res, next) => {
 
 // ROUTES END
 
+// ROUTES V10 - OPTION-9
+
+router.post('/v10/option_9/claimant-search', (req, res, next) => {
+    res.redirect('/v10/option_9/pip-service-choice');
+});
+
+router.post('/v10/option_9/pip-service-choice', (req, res, next) => {
+    res.redirect('/v10/option_9/create-record');
+});
+
+// router.post('/v10/option_9/pip-service-choice', (req, res, next) => {
+// const serviceChoice = req.session.data['pip-service-9'];
+// if (serviceChoice === 'yes') {
+//     res.redirect('/v10/option_9/create-record');
+// } else {
+//     res.redirect('/v10/option_9/service-confirm');
+// }
+// });
+
+router.post('/v10/option_9/service-confirm', (req, res, next) => {
+    const serviceConfirm = req.session.data['interruption-9'];
+    if (serviceConfirm === 'yes') {
+        res.redirect('/v10/option_9/pip-service-choice');
+    } else {
+        res.redirect('/v10/option_9/create-record');
+    }
+});
+
+// ROUTE END
+
 module.exports = router

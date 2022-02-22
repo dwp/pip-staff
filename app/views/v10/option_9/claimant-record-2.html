@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create record confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="create-record" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="email-confirmation">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Check the details before sending the invitation email</h1>
+
+        <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">National insurance number</th>
+              <td class="govuk-table__cell">{{ data['search-9'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">First name</th>
+              <td class="govuk-table__cell">{{ data['first-name-9-r'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Last name</th>
+              <td class="govuk-table__cell">{{ data['last-name-9-r'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Email address</th>
+              <td class="govuk-table__cell">{{ data['email-9-r'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Date of birth</th>
+              <td class="govuk-table__cell">{{ data['dob-day-9-r'] }} - {{ data ['dob-month-9-r'] }} - {{ data['dob-year-9-r'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Postcode</th>
+              <td class="govuk-table__cell">{{ data['address-postcode-9-r'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mobile number</th>
+              <td class="govuk-table__cell">{{ data['mobile-9-r'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><a href="create-record-2" class="govuk-link">Change</a></p>
+
+        <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitation email" id="submit">
+
+        <!-- <p><a href="claimant-search.html" class="govuk-link">Start again</a></p> -->
+
+      </div> <!-- govuk-grid-column-two-thirds -->
+    </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

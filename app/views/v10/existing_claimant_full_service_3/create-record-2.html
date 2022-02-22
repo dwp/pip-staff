@@ -23,23 +23,23 @@
 
             <div class="govuk-form-group govuk-!-padding-bottom--6">
                <h2 class="govuk-label-wrapper" ><label class="govuk-label govuk-label--s" for="national-insurance-number" id="national-insurance-number">National Insurance number</label></h2>
-              <input class="govuk-input govuk-input--width-10"  type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{ data['search-s3'] }}">
+              <input class="govuk-input govuk-input--width-10"  type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{{ data['search-s3'] }}">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="first-name" id="first-name">
+              <label class="govuk-label govuk-label--s" for="first-name-s3" id="first-name-s3">
                 First name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
-              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="First name">
+              <input class="govuk-input" type="text" name="first-name-s3" spellcheck="false" autocomplete="name" value="First name">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="last-name" id="last-name" >
+              <label class="govuk-label govuk-label--s" for="last-name-s3" id="last-name-s3" >
                 Last name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
-              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="Last name">
+              <input class="govuk-input" type="text" name="last-name-s3"spellcheck="false" autocomplete="name" value="Last name">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
