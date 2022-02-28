@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-  <form id="form" method="post" action="claimant-record">
+  <form id="form" method="post" action="claimant-record-2">
 
         <h1 class="govuk-heading-l">Enter claimant's details</h1>
 
@@ -27,57 +27,57 @@
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="first-name" id="first-name">
+              <label class="govuk-label govuk-label--s" for="first-name-s2">
                 First name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
-              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="First name">
+              <input class="govuk-input" type="text" spellcheck="false"  id="first-name-s2" name="first-name-s2" autocomplete="name" value="Lily-grace">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="last-name" id="last-name" >
+              <label class="govuk-label govuk-label--s" for="last-name-s2">
                 Last name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
-              <input class="govuk-input" type="text" spellcheck="false" autocomplete="name" value="Last name">
+              <input class="govuk-input" type="text" spellcheck="false"  id="last-name-s2" name="last-name-s2" autocomplete="name" value="Morrow">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="email" id="email" >
+              <label class="govuk-label govuk-label--s" for="email-s2">
                 Email address
               </label>
-              <input class="govuk-input"  type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" value="email@email.com">
+              <input class="govuk-input"  type="email" spellcheck="false"  id="email-s2" name="email-s2" aria-describedby="email-hint" autocomplete="email" value="lily-grace.2001@email.com">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Date of birth</label></h2>
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="dob">Date of birth</label></h2>
                   <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
                 </legend>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group govuk-!-margin-top--4">
-                      <label class="govuk-label govuk-date-input__label" for="dob-day" id="dob-day">
+                      <label class="govuk-label govuk-date-input__label" for="dob-day-s2">
                         Day
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" name="dob-day" type="text" autocomplete="bday-day" value="12">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2"  id="dob-days2" name="dob-day-s2" type="text" autocomplete="bday-day" value="24">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      <label class="govuk-label govuk-date-input__label" for="dob-month-s2">
                         Month
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" value="11">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month-s2" name="dob-month-s2" type="text" autocomplete="bday-month" value="12">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      <label class="govuk-label govuk-date-input__label" for="dob-year-s2">
                         Year
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" value="1991">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year-s2" name="dob-year-s2" type="text" autocomplete="bday-year" value="2001">
                     </div>
                   </div>
                 </div>
@@ -85,15 +85,15 @@
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="address-postcode" for="address-postcode">Postcode</label></h2>
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="address-postcode-s2">Postcode</label></h2>
               <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
-              <input class="govuk-input govuk-input--width-10" name="address-postcode" type="text" autocomplete="postal-code" value="AA1 1AA">
+              <input class="govuk-input govuk-input--width-10"  id="address-postcode-s2" name="address-postcode-s2" type="text" autocomplete="postal-code" value="BB1 1BB">
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="mobile-number" for="mobile-number">Mobile number</label></h2>
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="mobile-number-s2">Mobile number</label></h2>
               <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
-              <input class="govuk-input govuk-input--width-10" name="mobile-number"  type="text" value="07777777777">
+              <input class="govuk-input govuk-input--width-10"  id="mobile-number-s2" name="mobile-number-s2"  type="text" value="07777777772">
             </div> <!-- govuk-form-group -->
 
             <input type="submit" class="govuk-button" value="Save and continue" id="submit">

@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-  <form id="form" method="post" action="claimant-record">
+  <form id="form" method="post" action="claimant-record-2">
 
         <h1 class="govuk-heading-l">Enter claimant's details</h1>
 
@@ -27,57 +27,57 @@
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="first-name-s3" id="first-name-s3">
+              <label class="govuk-label govuk-label--s" for="first-name-s3">
                 First name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
-              <input class="govuk-input" type="text" name="first-name-s3" spellcheck="false" autocomplete="name" value="First name" {% if data.link === "first-name-s3" %} autofocus=true {% endif %}>
+              <input class="govuk-input" type="text" id="first-name-s3" name="first-name-s3" spellcheck="false" autocomplete="name" value="Shannen" {% if data.link === "first-name-s3" %} autofocus=true {% endif %}>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="last-name-s3" id="last-name-s3" >
+              <label class="govuk-label govuk-label--s" for="last-name-s3">
                 Last name
               </label>
               <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
-              <input class="govuk-input" type="text" name="last-name-s3"spellcheck="false" autocomplete="name" value="Last name" {% if data.link === "last-name-s3" %} autofocus=true {% endif %}>
+              <input class="govuk-input" type="text" id="last-name-s3" name="last-name-s3"spellcheck="false" autocomplete="name" value="Robles" {% if data.link === "last-name-s3" %} autofocus=true {% endif %}>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <label class="govuk-label govuk-label--s" for="email" id="email" >
+              <label class="govuk-label govuk-label--s" for="email">
                 Email address
               </label>
-              <input class="govuk-input"  type="email" name="email-s3" spellcheck="false" aria-describedby="email-hint" autocomplete="email" value="email@email.com" {% if data.link === "email-s3" %} autofocus=true {% endif %}>
+              <input class="govuk-input"  type="email" id="email-s3" name="email-s3" spellcheck="false" aria-describedby="email-hint" autocomplete="email" value="s.robles.1997@email.com" {% if data.link === "email-s3" %} autofocus=true {% endif %}>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Date of birth</label></h2>
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="dob-s3">Date of birth</label></h2>
                   <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
                 </legend>
                 <div class="govuk-date-input" id="dob">
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group govuk-!-margin-top--4">
-                      <label class="govuk-label govuk-date-input__label" for="dob-day" id="dob-day">
+                      <label class="govuk-label govuk-date-input__label" for="dob-day-s3">
                         Day
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" name="dob-day-s3" type="text" autocomplete="bday-day" value="12" {% if data.link === "dob-day-s3" %} autofocus=true {% endif %}>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day-s3" name="dob-day-s3" type="text" autocomplete="bday-day" value="18" {% if data.link === "dob-day-s3" %} autofocus=true {% endif %}>
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      <label class="govuk-label govuk-date-input__label" for="dob-month-s3">
                         Month
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month-s3" type="text" autocomplete="bday-month" value="11">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month-s3" name="dob-month-s3" type="text" autocomplete="bday-month" value="05">
                     </div>
                   </div>
                   <div class="govuk-date-input__item">
                     <div class="govuk-form-group">
-                      <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      <label class="govuk-label govuk-date-input__label" for="dob-year-s3">
                         Year
                       </label>
-                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year-s3" type="text" autocomplete="bday-year" value="1991">
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year-s3" name="dob-year-s3" type="text" autocomplete="bday-year" value="1997">
                     </div>
                   </div>
                 </div>
@@ -85,15 +85,15 @@
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="address-postcode" for="address-postcode">Postcode</label></h2>
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="address-postcode-s3">Postcode</label></h2>
               <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
-              <input class="govuk-input govuk-input--width-10" name="address-postcode-s3" type="text" autocomplete="postal-code" value="AA1 1AA" {% if data.link === "address-postcode-s3" %} autofocus=true {% endif %}>
+              <input class="govuk-input govuk-input--width-10" id="address-postcode-s3" name="address-postcode-s3" type="text" autocomplete="postal-code" value="CC1 1CC" {% if data.link === "address-postcode-s3" %} autofocus=true {% endif %}>
             </div> <!-- govuk-form-group -->
 
             <div class="govuk-form-group">
-              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" id="mobile-number" for="mobile-number">Mobile number</label></h2>
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="mobile-number-s3">Mobile number</label></h2>
               <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
-              <input class="govuk-input govuk-input--width-10" name="mobile-number-s3"  type="text" value="07777777777" {% if data.link === "mobile-number-s3" %} autofocus=true {% endif %}>
+              <input class="govuk-input govuk-input--width-10" id="mobile-number-s3" name="mobile-number-s3"  type="text" value="07777777773" {% if data.link === "mobile-number-s3" %} autofocus=true {% endif %}>
             </div> <!-- govuk-form-group -->
 
             <input type="submit" class="govuk-button" value="Save and continue" id="submit">
