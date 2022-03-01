@@ -21,10 +21,10 @@
 
             <div class="govuk-panel govuk-panel--confirmation">
               <h1 class="govuk-panel__title">
-                Email sent to First name Last name
+                Email sent to {{ data['first-name-s3'] }} {{ data['last-name-s3'] }}
               </h1>
               <div class="govuk-panel__body">
-                email@email.com
+                {{ data['email-s3'] }}
               </div>
             </div> <!-- govuk-panel -->
             <input type="submit" class="govuk-button" value="Back to search" id="submit">
