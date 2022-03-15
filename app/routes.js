@@ -160,4 +160,22 @@ router.post('/v10/option_9/service-confirm', (req, res, next) => {
 
 // ROUTE END
 
+// ROUTES V10 - OPTION-10
+
+router.post('/v10/option_10/claimant-search', (req, res, next) => {
+    res.redirect('/v10/option_10/pip-service-choice');
+});
+
+router.post('/v10/option_10/pip-service-choice', (req, res, next) => {
+const serviceChoice = req.session.data['pip-service-10'];
+if (serviceChoice === 'yes') {
+    res.redirect('/v10/option_10/create-record-part');
+} else {
+    res.redirect('/v10/option_10/create-record-full');
+}
+});
+
+
+// ROUTE END
+
 module.exports = router
