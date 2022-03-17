@@ -175,7 +175,23 @@ if (serviceChoice === 'yes') {
 }
 });
 
-
 // ROUTE END
+
+// ROUTES IT4
+
+router.post('/reference_screens/post_mvp/it_4/new_claimant_journey/claimant-search', (req, res, next) => {
+    res.redirect('/reference_screens/post_mvp/it_4/new_claimant_journey/pip-service-choice');
+});
+
+router.post('/reference_screens/post_mvp/it_4/new_claimant_journey/pip-service-choice', (req, res, next) => {
+    const pipChoice = req.session.data['pip-service-it4'];
+    if (pipChoice === 'tactical') {
+        res.redirect('/reference_screens/post_mvp/it_4/new_claimant_journey/create-record-part');
+    } else {
+        res.redirect('/reference_screens/post_mvp/it_4/new_claimant_journey/create-record-full');
+    }
+    });
+
+// ROUTES END
 
 module.exports = router
