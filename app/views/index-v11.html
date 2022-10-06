@@ -1,0 +1,34 @@
+
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v1/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="index" class="govuk-back-link">Back to main index</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">PIP agent screens</h1>
+
+      <h2 class="govuk-heading-l">Prototypes for PIP agents UI service</h2>
+      <p>Testing the reclaims journey</p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+      <h3 class="govuk-heading-m">Research session date TBC</h3>
+      <p><a href="/v11/option_6/claimant-search" class="govuk-link">Reclaims - start of journey</a></p>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+{% endblock %}

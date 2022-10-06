@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create claimant's record
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="claimant-record-2">
+
+        <h1 class="govuk-heading-l">Enter claimant's details</h1>
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group govuk-!-padding-bottom--6">
+               <h2 class="govuk-label-wrapper" ><label class="govuk-label govuk-label--s" for="national-insurance-number" id="national-insurance-number">National Insurance number</label></h2>
+              <input class="govuk-input govuk-input--width-10"  type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{{ data['search-s1'] }}" disabled>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="first-name-s1" >
+                First name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
+              <input class="govuk-input" type="text" spellcheck="false" id="first-name-s1" name="first-name-s1" autocomplete="name" value="Eddie">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="last-name-s1">
+                Last name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
+              <input class="govuk-input" type="text" spellcheck="false"  id="last-name-s1" name="last-name-s1" autocomplete="name" value="Foley">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="email-s1">
+                Email address
+              </label>
+              <input class="govuk-input"  type="email" spellcheck="false"  id="email-s1" name="email-s1" aria-describedby="email-hint" autocomplete="email" value="eddie.foley@virgin.net">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="dob">Date of birth</label></h2>
+                  <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
+                </legend>
+                <div class="govuk-date-input" id="dob">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group govuk-!-margin-top--4">
+                      <label class="govuk-label govuk-date-input__label" for="dob-day-s1">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2"  id="dob-day-s1" name="dob-day-s1" type="text" autocomplete="bday-day" value="12">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-month-s1">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month-s1" name="dob-month-s1" type="text" autocomplete="bday-month" value="11">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-year-s1">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year-s1" name="dob-year-s1" type="text" autocomplete="bday-year" value="1991">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="address-postcode-s1">Postcode</label></h2>
+              <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
+              <input class="govuk-input govuk-input--width-10" id="address-postcode-s1" name="address-postcode-s1" type="text" autocomplete="postal-code" value="AA1 1AA">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="mobile-number-s1">Mobile number</label></h2>
+              <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
+              <input class="govuk-input govuk-input--width-10" id="mobile-number-s1" name="mobile-number-s1"  type="text" value="07777777771">
+            </div> <!-- govuk-form-group -->
+
+            <input type="submit" class="govuk-button" value="Save and continue" id="submit">
+           <a href="claimant-record" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

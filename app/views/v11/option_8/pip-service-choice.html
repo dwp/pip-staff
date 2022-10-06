@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+PIP Apply service choice
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+<a href="claimant-search.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <form id="form" method="post" action="#">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Which online service will they be using?
+                        </h1>
+                    </legend>
+                    
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="pip-service-1" name="pip-service-8" type="radio"
+                                value="Old">
+                            <label class="govuk-label govuk-radios__label" for="pip-service-8">
+                                Online PIP2 only
+                            </label>
+                            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                Select this option if they have completed a PIP1 over the phone.
+                            </div>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="pip-service-2" name="pip-service-8" type="radio"
+                                value="New">
+                            <label class="govuk-label govuk-radios__label" for="pip-service-8">
+                                Online PIP1 and PIP2
+                            </label>
+                            <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                Only select this option if they have not completed a PIP1 over the phone.
+                              </div>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button"
+            value="Continue" id="submit">
+
+        </form>
+
+    </div> <!-- govuk-grid-column-two-thirds -->
+</div> <!-- govuk-grid-row -->
+
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

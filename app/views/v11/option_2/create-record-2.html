@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create claimant record
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="claimant-record" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="claimant-record">
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-l govuk-!-margin-bottom-0">Enter claimant's details</h1>
+
+            <div class="govuk-form-group govuk-!-margin-top-7">
+               <h2 name="#national-insurance-number" class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="national-insurance-number">Claimant's National Insurance number</label></h2>
+              <input class="govuk-input govuk-input--width-10" id="national-insurance-number-2" name="national-insurance-number-2" type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{{ data['national-insurance-number-2'] }}">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="first-name-2">
+                Claimant's first name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example, Janet.</div>
+              <input class="govuk-input" id="first-name-2" name="first-name-2" type="text" spellcheck="false" autocomplete="name" value="{{ data['first-name-2'] }}">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="last-name-2">
+                Claimant's last name
+              </label>
+              <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed.For example, Smith-Johnson.</div>
+              <input class="govuk-input" id="last-name-2" name="last-name-2" type="text" spellcheck="false" autocomplete="name" value="{{ data['last-name-2'] }}">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-label--s" for="email-2">
+                Claimant's email address
+              </label>
+              <input class="govuk-input" id="email-2" name="email-2" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email" value="{{ data['email-2'] }}">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="full-name">Claimant's date of birth</label></h2>
+                  <!-- <label class="govuk-label" for="address-postcode">Date of birth</label> -->
+                </legend>
+                <div class="govuk-date-input" id="dob">
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group govuk-!-margin-top--4">
+                      <label class="govuk-label govuk-date-input__label" for="dob-day-2">
+                        Day
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day-2" name="dob-day-2" type="text" autocomplete="bday-day" inputmode="numeric" value="{{ data['dob-day-2'] }}">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-month-2">
+                        Month
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month-2" name="dob-month-2" type="text" autocomplete="bday-month" inputmode="numeric" value="{{ data ['dob-month-2'] }}">
+                    </div>
+                  </div>
+                  <div class="govuk-date-input__item">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label govuk-date-input__label" for="dob-year-2">
+                        Year
+                      </label>
+                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year-2" name="dob-year-2" type="text" autocomplete="bday-year"  inputmode="numeric" value="{{ data['dob-year-2'] }}">
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="address-postcode-2">Claimant's postcode</label></h2>
+              <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
+              <input class="govuk-input govuk-input--width-10" id="address-postcode-2" name="address-postcode-2" type="text" autocomplete="postal-code" value="{{ data['address-postcode-2'] }}">
+            </div> <!-- govuk-form-group -->
+
+            <div class="govuk-form-group">
+              <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="mobile-2">Claimant's mobile number</label></h2>
+              <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
+              <input class="govuk-input govuk-input--width-10" id="mobile-2" name="mobile-2" type="text" value="{{ data['mobile-2'] }}">
+            </div> <!-- govuk-form-group -->
+
+            <input type="submit" class="govuk-button" value="Save and continue" id="submit">
+            <a href="claimant-record" class="govuk-button govuk-button--secondary" data-module="govuk-button">Cancel</a>
+
+          </div> <!-- govuk-grid-column-two-thirds -->
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
