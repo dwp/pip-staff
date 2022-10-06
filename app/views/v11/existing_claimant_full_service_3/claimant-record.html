@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Claimant's record
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  {% include "includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="email-confirmation">
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Claimant record</h1>
+
+            <table class="govuk-table">
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">National insurance number</th>
+                  <td class="govuk-table__cell">{{ data['search-s3'] }}</td>
+                  <td class="govuk-table__cell"></td>                 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">First name</th>
+                  <td class="govuk-table__cell">Shannen</td>
+                  <td class="govuk-table__cell"><a href="create-record-2?link=first-name-s3">Edit</a></td> 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Last name</th>
+                  <td class="govuk-table__cell">Robles</td>
+                  <td class="govuk-table__cell"><a href="create-record-2?link=last-name-s3">Edit</a></td> 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Email address</th>
+                  <td class="govuk-table__cell">s.robles.1997@email.com</td>
+                  <td class="govuk-table__cell"><a href="create-record-2?link=email-s3">Edit</a></td> 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Date of birth</th>
+                  <td class="govuk-table__cell">18 - 05 - 1997</td>
+                  <td class="govuk-table__cell"><a href="create-record-2?link=dob-day-s3">Edit</a></td> 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Postcode</th>
+                  <td class="govuk-table__cell">CC1 1CC</td>
+                  <td class="govuk-table__cell"><a href="create-record-2?link=address-postcode-s3">Edit</a></td> 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Mobile number</th>
+                  <td class="govuk-table__cell">07777777773</td>
+                  <td class="govuk-table__cell"><a href="create-record-2?link=mobile-number-s3">Edit</a></td> 
+                </tr>
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Service type offered</th>
+                  <td class="govuk-table__cell">Full service &ndash; initial data gather (PIP 1) and health questionnaire (PIP2)</td>
+                  <td class="govuk-table__cell"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <input type="submit" class="govuk-button" value="Send invitation email" id="submit">
+
+            <p><a href="claimant-search" class="govuk-link">Search for another claimant</a></p>
+
+          <div class="govuk-grid-column-one-third">
+
+          </div> <!-- govuk-grid-column-one-third -->
+        </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block header %}
+{% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+PIP Apply service choice
+{% endblock %}
+
+{% block beforeContent %}
+{% include "includes/beta-banner.html" %}
+<a href="claimant-search.html" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<form id="form" method="post" action="#">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+                    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                        <div class="govuk-notification-banner__header">
+                          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                            Important!
+                          </h2>
+                        </div>
+                        <div class="govuk-notification-banner__content">
+                          <p class="govuk-notification-banner__heading">
+                            Has the claimant completed the first stage (PIP1) over the phone?
+                            
+                          </p>
+                        </div>
+                      </div>
+
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="interruption-8" name="interruption-8" type="radio"
+                                value="yes">
+                            <label class="govuk-label govuk-radios__label" for="interruption-8">
+                                Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="interruption-8" name="interruption-8" type="radio"
+                                value="no">
+                            <label class="govuk-label govuk-radios__label" for="interruption-8">
+                                No
+                            </label>
+                        </div>
+                    </div>
+
+                </fieldset>
+            </div>
+
+            <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Continue"
+                id="submit">
+
+
+        </div> <!-- govuk-grid-column-full -->
+    </div> <!-- govuk-grid-row -->
+</form>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
