@@ -26,6 +26,34 @@ const router = express.Router()
 //     res.redirect('/v7/option_1/new-existing-user');
 // });
 
+// Reclaims ROUTES
+
+router.post('/v11/reclaims/no-record/claimant-search', (req, res, next) => {
+        res.redirect('/v11/reclaims/no-record/pip-service-choice');
+    });
+
+router.post('/v11/reclaims/record-exists/claimant-search', (req, res, next) => {
+            res.redirect('/v11/reclaims/record-exists/claimant-record');
+        });
+
+router.post('/v11/reclaims/no-record/pip-service-choice', (req, res, next) => {
+        const serviceChoice = req.session.data['pip-service-choice'];
+        if (serviceChoice === 'Old') {
+            res.redirect('/v11/reclaims/no-record/create-record');
+        } else {
+            res.redirect('/v10/option_5/service-confirm');
+        }
+    });
+
+router.post('/v11/reclaims/record-exists/claimant-record', (req, res, next) => {
+            const resendChoice = req.session.data['action'];
+            if (resendChoice == 'resend') {
+                res.redirect('/v11/reclaims/record-exists/email-confirmation');
+            } else {
+                res.redirect('/v11/reclaims/record-exists/check-record');
+            }
+        });
+
 // ROUTES V10 - OPTION-5
 
 router.post('/v10/option_5/claimant-search', (req, res, next) => {
@@ -52,7 +80,7 @@ router.post('/v10/option_5/service-confirm', (req, res, next) => {
 
 // ROUTES END
 
-// ROUTES V10 - OPTION-6    
+// ROUTES V10 - OPTION-6
 
 router.post('/v10/option_6/claimant-search', (req, res, next) => {
     res.redirect('/v10/option_6/pip-service-choice');
