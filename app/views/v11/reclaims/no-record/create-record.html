@@ -14,7 +14,7 @@ Create claimant record
 {% endblock %}
 
 {% block content %}
-<form id="form" method="post" action="claimant-record">
+<form id="form" method="post" action="#">
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
@@ -25,7 +25,7 @@ Create claimant record
         <h2 name="#national-insurance-number" class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
             for="national-insurance-number">National Insurance number</label></h2>
         <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number"
-          type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{{ data['search-7'] }}">
+          type="text" aria-describedby="national-insurance-number-hint" spellcheck="false" value="{{ data['national-insurance-number'] }}">
       </div> <!-- govuk-form-group -->
 
       <div class="govuk-form-group">
@@ -34,7 +34,7 @@ Create claimant record
         </label>
         <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example,
           Janet.</div>
-        <input class="govuk-input" id="first-name-7" name="first-name-7" type="text" spellcheck="false" autocomplete="name">
+        <input class="govuk-input" id="first-name-7" name="first-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['first-name'] }}">
       </div> <!-- govuk-form-group -->
 
       <div class="govuk-form-group">
@@ -43,15 +43,15 @@ Create claimant record
         </label>
         <div id="event-name-hint" class="govuk-hint">Include capital letters in the name where needed. For example,
           Smith-Johnson.</div>
-        <input class="govuk-input" id="last-name-7" name="last-name-7" type="text" spellcheck="false" autocomplete="name">
+        <input class="govuk-input" id="last-name-7" name="last-name" type="text" spellcheck="false" autocomplete="name" value="{{ data['last-name'] }}">
       </div> <!-- govuk-form-group -->
 
       <div class="govuk-form-group">
         <label class="govuk-label govuk-label--s" for="email-7">
           Email address
         </label>
-        <input class="govuk-input" id="email-7" name="email-7" type="email" spellcheck="false" aria-describedby="email-hint"
-          autocomplete="email">
+        <input class="govuk-input" id="email-7" name="email" type="email" spellcheck="false" aria-describedby="email-hint"
+          autocomplete="email" value="{{ data['email'] }}">
       </div> <!-- govuk-form-group -->
 
       <div class="govuk-form-group">
@@ -64,29 +64,29 @@ Create claimant record
           <div class="govuk-date-input" id="dob">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group govuk-!-margin-top--4">
-                <label class="govuk-label govuk-date-input__label" for="dob-day-7">
+                <label class="govuk-label govuk-date-input__label" for="dob-day">
                   Day
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day-7" name="dob-day-7"
-                  type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day"
+                  type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric" value="{{ data['dob-day'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="dob-month-7">
+                <label class="govuk-label govuk-date-input__label" for="dob-month">
                   Month
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month-7" name="dob-month-7"
-                  type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month"
+                  type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric" value="{{ data['dob-month'] }}">
               </div>
             </div>
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
-                <label class="govuk-label govuk-date-input__label" for="dob-year-7">
+                <label class="govuk-label govuk-date-input__label" for="dob-year">
                   Year
                 </label>
-                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year-7" name="dob-year-7"
-                  type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric">
+                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year"
+                  type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric" value="{{ data['dob-year'] }}">
               </div>
             </div>
           </div>
@@ -97,15 +97,15 @@ Create claimant record
         <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s"
             for="address-postcode-7">Postcode</label></h2>
         <!-- <label class="govuk-label" for="address-postcode">Postcode</label> -->
-        <input class="govuk-input govuk-input--width-10" id="address-postcode-7" name="address-postcode-7" type="text"
-          autocomplete="postal-code">
+        <input class="govuk-input govuk-input--width-10" id="address-postcode-7" name="address-postcode" type="text"
+          autocomplete="postal-code" value="{{ data['address-postcode'] }}">
       </div> <!-- govuk-form-group -->
 
       <div class="govuk-form-group">
         <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="mobile-7">Mobile number</label>
         </h2>
         <!-- <label class="govuk-label" for="address-postcode">Mobile number</label> -->
-        <input class="govuk-input govuk-input--width-10" id="mobile-7" name="mobile-7" type="text">
+        <input class="govuk-input govuk-input--width-10" id="mobile-7" name="mobile" type="text" value="{{ data['mobile'] }}">
       </div> <!-- govuk-form-group -->
 
       <input type="submit" class="govuk-button" value="Save and continue" id="submit">
