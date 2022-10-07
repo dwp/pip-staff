@@ -32,26 +32,61 @@ router.post('/v11/reclaims/no-record/claimant-search', (req, res, next) => {
         res.redirect('/v11/reclaims/no-record/pip-service-choice');
     });
 
+router.post('/v11/reclaims/no-record/claimant-record', (req, res, next) => {
+        res.redirect('/v11/reclaims/no-record/email-confirmation');
+    });
+
+router.post('/v11/reclaims/no-record/email-confirmation', (req, res, next) => {
+        res.redirect('/v11/reclaims/no-record/claimant-search');
+    });
+
+router.post('/v11/reclaims/no-record/create-record', (req, res, next) => {
+        res.redirect('/v11/reclaims/no-record/claimant-record');
+    });
+
+router.post('/v11/reclaims/no-record/pip-service-choice', (req, res, next) => {
+        const serviceChoice = req.session.data['pip-service-choice'];
+        if (serviceChoice == 'Old') {
+            res.redirect('/v11/reclaims/no-record/create-record');
+        } else {
+            res.redirect('/v11/reclaims/no-record/create-record');
+        }
+    });
+
+router.post('/v11/reclaims/record-exists/email-confirmation', (req, res, next) => {
+        res.redirect('/v11/reclaims/record-exists/claimant-search');
+    });
+
+router.post('/v11/reclaims/record-exists/check-record', (req, res, next) => {
+        res.redirect('/v11/reclaims/record-exists/email-confirmation');
+    });
+
+router.post('/v11/reclaims/record-exists/edit-record-check', (req, res, next) => {
+        res.redirect('/v11/reclaims/record-exists/check-record');
+    });
+
 router.post('/v11/reclaims/record-exists/claimant-search', (req, res, next) => {
             res.redirect('/v11/reclaims/record-exists/claimant-record');
         });
 
-router.post('/v11/reclaims/no-record/pip-service-choice', (req, res, next) => {
-        const serviceChoice = req.session.data['pip-service-choice'];
-        if (serviceChoice === 'Old') {
-            res.redirect('/v11/reclaims/no-record/create-record');
-        } else {
-            res.redirect('/v10/option_5/service-confirm');
-        }
-    });
-
 router.post('/v11/reclaims/record-exists/claimant-record', (req, res, next) => {
+
             const resendChoice = req.session.data['action'];
+            const nationalInsurance = req.session.data['national-insurance-number']
+
             if (resendChoice == 'resend') {
                 res.redirect('/v11/reclaims/record-exists/email-confirmation');
             } else {
                 res.redirect('/v11/reclaims/record-exists/check-record');
             }
+        });
+
+router.post('/v11/reclaims/record-exists/edit-record', (req, res, next) => {
+            // const info = req.session.data['national-insurance'];
+                const nationalInsurance = req.session.data['national-insurance-number']
+                console.log('is-this-calling', req.session.data)
+
+                res.redirect('/v11/reclaims/record-exists/claimant-record');
         });
 
 // ROUTES V10 - OPTION-5
