@@ -10,7 +10,7 @@
 
 {% block beforeContent %}
   {% include "includes/beta-banner.html" %}
-  <a href="create-record" class="govuk-back-link">Back</a>
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -129,7 +129,7 @@
             </dt>
             {% if not data['email'] %}
             <dd class="govuk-summary-list__value">
-              geoffhall.@gmail.co.uk
+              geoffhall@gmail.co.uk
             </dd>
             {% else %}
             <dd class="govuk-summary-list__value" name="national-insurance">
@@ -199,28 +199,7 @@
               </a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Service type offered
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Online PIP2 only
-            </dd>
-            <dd class="govuk-summary-list__actions">
 
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Last claim invitation email sent
-            </dt>
-            <dd class="govuk-summary-list__value">
-              22 June 2022
-            </dd>
-            <dd class="govuk-summary-list__actions">
-
-            </dd>
-          </div>
         </dl>
 
 
