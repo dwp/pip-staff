@@ -128,7 +128,7 @@
             </dt>
             {% if not data['email'] %}
             <dd class="govuk-summary-list__value">
-              geoffhall.@gmail.co.uk
+              geoffhall@gmail.co.uk
             </dd>
             {% else %}
             <dd class="govuk-summary-list__value" name="national-insurance">
@@ -136,7 +136,7 @@
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record#email">
                 Change<span class="govuk-visually-hidden"> contact details</span>
               </a>
             </dd>
@@ -150,12 +150,12 @@
               11 November 1991
             </dd>
             {% else %}
-            <dd class="govuk-summary-list__value" name="national-insurance">
+            <dd class="govuk-summary-list__value" name="dob">
                 {{ data['dob-day'] }}  {{ data['dob-month'] }}  {{ data['dob-year'] }}
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record#dob-day">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
@@ -169,12 +169,12 @@
               LS6 3DS
             </dd>
             {% else %}
-            <dd class="govuk-summary-list__value" name="national-insurance">
+            <dd class="govuk-summary-list__value" name="post">
                {{ data['address-postcode'] }}
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record#address-postcode">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
@@ -188,12 +188,12 @@
               079847362892
             </dd>
             {% else %}
-            <dd class="govuk-summary-list__value" name="national-insurance">
+            <dd class="govuk-summary-list__value" name="mob">
                {{ data['mobile'] }}
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record#mobile">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
