@@ -77,9 +77,13 @@ router.post('/v11/reclaims/record-exists/claimant-record', (req, res, next) => {
             if (resendChoice == 'resend') {
                 res.redirect('/v11/reclaims/record-exists/email-confirmation');
             } else {
-                res.redirect('/v11/reclaims/record-exists/check-record');
+                res.redirect('/v11/reclaims/record-exists/pip-service-choice');
             }
         });
+
+  router.post('/v11/reclaims/record-exists/pip-service-choice', (req, res, next) => {
+    res.redirect('/v11/reclaims/record-exists/check-record');
+});
 
 router.post('/v11/reclaims/record-exists/edit-record', (req, res, next) => {
             // const info = req.session.data['national-insurance'];
