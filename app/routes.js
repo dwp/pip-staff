@@ -108,6 +108,12 @@ router.post('/v11/reclaims/option-one/email-confirmation-resend', (req, res, nex
 router.post('/v11/reclaims/option-one/check-record', (req, res, next) => {
         res.redirect('/v11/reclaims/option-one/email-confirmation');
     });
+router.post('/v11/reclaims/option-one/check-record-full', (req, res, next) => {
+        res.redirect('/v11/reclaims/option-one/email-confirmation');
+    });
+router.post('/v11/reclaims/option-one/check-record-part', (req, res, next) => {
+        res.redirect('/v11/reclaims/option-one/email-confirmation');
+    });
 
 router.post('/v11/reclaims/option-one/edit-record-check', (req, res, next) => {
         res.redirect('/v11/reclaims/option-one/check-record');
@@ -129,10 +135,6 @@ router.post('/v11/reclaims/option-one/claimant-record', (req, res, next) => {
             }
         });
 
-  router.post('/v11/reclaims/option-one/pip-service-choice', (req, res, next) => {
-    res.redirect('/v11/reclaims/option-one/check-record');
-});
-
 router.post('/v11/reclaims/option-one/edit-record', (req, res, next) => {
             // const info = req.session.data['national-insurance'];
                 const nationalInsurance = req.session.data['national-insurance-number']
@@ -140,6 +142,15 @@ router.post('/v11/reclaims/option-one/edit-record', (req, res, next) => {
 
                 res.redirect('/v11/reclaims/option-one/claimant-record');
         });
+
+router.post('/v11/reclaims/option-one/pip-service-choice', (req, res, next) => {
+  const pipChoice = req.session.data['pip-service-choice'];
+  if (pipChoice === 'tactical') {
+      res.redirect('/v11/reclaims/option-one/check-record-part');
+  } else {
+      res.redirect('/v11/reclaims/option-one/check-record-full');
+  }
+  });
 //Option 1 end*************************************************************************
 
 //Option 2 start*************************************************************************
