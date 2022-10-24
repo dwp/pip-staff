@@ -19,7 +19,21 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
 
-        <h1 class="govuk-heading-l">Claimant record</h1>
+        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+          <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+              Important
+            </h2>
+          </div>
+          <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+              Service selected: Online health questionnaire (PIP2)<br>
+            <a class="govuk-notification-banner__link" href="pip-service-choice.html">Change service type</a>
+          </p>
+          </div>
+        </div>
+
+        <h1 class="govuk-heading-l">Check the details before sending the invitation email</h1>
 
         <!-- <table class="govuk-table">
           <tbody class="govuk-table__body">
@@ -60,6 +74,7 @@
           </tbody>
         </table> -->
 
+
         <h2 class="govuk-heading-m">Personal details</h2>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -79,7 +94,7 @@
               {% endif %}
 
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record-check">
                 Change<span class="govuk-visually-hidden"> name</span>
               </a>
             </dd>
@@ -98,7 +113,7 @@
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record-check">
                 Change<span class="govuk-visually-hidden"> date of birth</span>
               </a>
             </dd>
@@ -117,7 +132,7 @@
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record">
+              <a class="govuk-link" href="edit-record-check">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
@@ -136,7 +151,7 @@
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record#email">
+              <a class="govuk-link" href="edit-record-check#email">
                 Change<span class="govuk-visually-hidden"> contact details</span>
               </a>
             </dd>
@@ -150,12 +165,12 @@
               11 November 1991
             </dd>
             {% else %}
-            <dd class="govuk-summary-list__value" name="dob">
+            <dd class="govuk-summary-list__value" name="national-insurance">
                 {{ data['dob-day'] }}  {{ data['dob-month'] }}  {{ data['dob-year'] }}
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record#dob-day">
+              <a class="govuk-link" href="edit-record-check#dob-day">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
@@ -169,12 +184,12 @@
               LS6 3DS
             </dd>
             {% else %}
-            <dd class="govuk-summary-list__value" name="post">
+            <dd class="govuk-summary-list__value" name="national-insurance">
                {{ data['address-postcode'] }}
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record#address-postcode">
+              <a class="govuk-link" href="edit-record-check#address-postcode">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
@@ -193,60 +208,18 @@
             </dd>
             {% endif %}
             <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="edit-record#mobile">
+              <a class="govuk-link" href="edit-record-check#mobile">
                 Change<span class="govuk-visually-hidden"> address</span>
               </a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Service type offered
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Online PIP2 only
-            </dd>
-            <dd class="govuk-summary-list__actions">
 
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-            Claim invitation email last sent
-            </dt>
-            <dd class="govuk-summary-list__value">
-              21 December 2021
-            </dd>
-            <dd class="govuk-summary-list__actions">
-
-            </dd>
-          </div>
         </dl>
 
 
-        <!--<p><a href="create-record-2" class="govuk-link">Change</a></p>-->
+        <!-- <p><a href="create-record-2" class="govuk-link">Change</a></p> -->
 
-          {{ govukRadios({
-            name: "action",
-            fieldset: {
-              legend: {
-                text: "What invitation email does the claimant need?",
-                isPageHeading: true,
-                classes: "govuk-fieldset__legend--m"
-              }
-            },
-            items: [
-              {
-                value: "resend",
-                text: "Duplicate email for an in-progress claim"
-              },
-              {
-                value: "reclaim",
-                text: "Email for a new claim "
-              }
-            ]
-          }) }}
-
-        <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Save and continue" id="submit">
+        <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Send invitation email" id="submit">
 
         <!-- <p><a href="pip-service-choice" class="govuk-link">Start again</a></p> -->
 

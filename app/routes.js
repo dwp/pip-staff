@@ -166,6 +166,13 @@ router.post('/v11/reclaims/option-two/check-record', (req, res, next) => {
         res.redirect('/v11/reclaims/option-two/email-confirmation');
     });
 
+router.post('/v11/reclaims/option-two/check-record-full', (req, res, next) => {
+        res.redirect('/v11/reclaims/option-two/email-confirmation');
+    });
+router.post('/v11/reclaims/option-two/check-record-part', (req, res, next) => {
+        res.redirect('/v11/reclaims/option-two/email-confirmation');
+    });
+
 router.post('/v11/reclaims/option-two/edit-record-check', (req, res, next) => {
         res.redirect('/v11/reclaims/option-two/check-record');
     });
@@ -186,10 +193,6 @@ router.post('/v11/reclaims/option-two/claimant-record', (req, res, next) => {
             }
         });
 
-  router.post('/v11/reclaims/option-two/pip-service-choice', (req, res, next) => {
-    res.redirect('/v11/reclaims/option-two/check-record');
-});
-
 router.post('/v11/reclaims/option-two/edit-record', (req, res, next) => {
             // const info = req.session.data['national-insurance'];
                 const nationalInsurance = req.session.data['national-insurance-number']
@@ -197,6 +200,15 @@ router.post('/v11/reclaims/option-two/edit-record', (req, res, next) => {
 
                 res.redirect('/v11/reclaims/option-two/claimant-record');
         });
+
+router.post('/v11/reclaims/option-two/pip-service-choice', (req, res, next) => {
+  const pipChoice = req.session.data['pip-service-choice'];
+  if (pipChoice === 'tactical') {
+      res.redirect('/v11/reclaims/option-two/check-record-part');
+  } else {
+      res.redirect('/v11/reclaims/option-two/check-record-full');
+  }
+});
 //Option 2 end*************************************************************************
 
 //Option 3 start*************************************************************************
@@ -209,6 +221,12 @@ router.post('/v11/reclaims/option-three/email-confirmation-resend', (req, res, n
     });
 
 router.post('/v11/reclaims/option-three/check-record', (req, res, next) => {
+        res.redirect('/v11/reclaims/option-three/email-confirmation');
+    });
+router.post('/v11/reclaims/option-three/check-record-full', (req, res, next) => {
+        res.redirect('/v11/reclaims/option-three/email-confirmation');
+    });
+router.post('/v11/reclaims/option-three/check-record-part', (req, res, next) => {
         res.redirect('/v11/reclaims/option-three/email-confirmation');
     });
 
@@ -232,10 +250,6 @@ router.post('/v11/reclaims/option-three/claimant-record', (req, res, next) => {
             }
         });
 
-  router.post('/v11/reclaims/option-three/pip-service-choice', (req, res, next) => {
-    res.redirect('/v11/reclaims/option-three/check-record');
-});
-
 router.post('/v11/reclaims/option-three/edit-record', (req, res, next) => {
             // const info = req.session.data['national-insurance'];
                 const nationalInsurance = req.session.data['national-insurance-number']
@@ -243,6 +257,15 @@ router.post('/v11/reclaims/option-three/edit-record', (req, res, next) => {
 
                 res.redirect('/v11/reclaims/option-three/claimant-record');
         });
+
+router.post('/v11/reclaims/option-three/pip-service-choice', (req, res, next) => {
+  const pipChoice = req.session.data['pip-service-choice'];
+  if (pipChoice === 'tactical') {
+      res.redirect('/v11/reclaims/option-three/check-record-part');
+  } else {
+      res.redirect('/v11/reclaims/option-three/check-record-full');
+  }
+});
 //Option 3 end*************************************************************************
 
 // ROUTES V10 - OPTION-5
