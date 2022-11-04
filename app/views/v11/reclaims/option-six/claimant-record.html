@@ -1,0 +1,263 @@
+{% extends "layout.html" %}
+
+{% block header %}
+  {% include "v4/_header.html" %}
+{% endblock %}
+
+{% block pageTitle %}
+  Create record confirmation
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/beta-banner.html" %}
+  <a href="javascript:history.back()" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+  <form id="form" method="post" action="#">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">Claimant record</h1>
+
+        <!-- <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">National insurance number</th>
+              <td class="govuk-table__cell">{{ data['search-7'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">First name</th>
+              <td class="govuk-table__cell">{{ data['first-name-7'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Last name</th>
+              <td class="govuk-table__cell">{{ data['last-name-7'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Email address</th>
+              <td class="govuk-table__cell">{{ data['email-7'] }}</td>
+              </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Date of birth</th>
+              <td class="govuk-table__cell">{{ data['dob-day-7'] }} - {{ data ['dob-month-7'] }} - {{ data['dob-year-7'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Postcode</th>
+              <td class="govuk-table__cell">{{ data['address-postcode-7'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Mobile number</th>
+              <td class="govuk-table__cell">{{ data['mobile-7'] }}</td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table> -->
+
+        <h2 class="govuk-heading-m">Personal details</h2>
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              National insurance number
+            </dt>
+
+            {% if not data['national-insurance-number'] %}
+            <dd class="govuk-summary-list__value" name="national-insurance">
+                AA370773A
+            </dd>
+              {% else %}
+              <dd class="govuk-summary-list__value" name="national-insurance">
+                  {{ data['national-insurance-number'] }}
+              </dd>
+              {% endif %}
+
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record">
+                Change<span class="govuk-visually-hidden"> name</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              First name
+            </dt>
+            {% if not data['first-name'] %}
+            <dd class="govuk-summary-list__value">
+              Geoff
+            </dd>
+            {% else %}
+            <dd class="govuk-summary-list__value" name="national-insurance">
+                {{ data['first-name'] }}
+            </dd>
+            {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record">
+                Change<span class="govuk-visually-hidden"> date of birth</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Last name
+            </dt>
+            {% if not data['last-name'] %}
+            <dd class="govuk-summary-list__value">
+              Testing
+            </dd>
+            {% else %}
+            <dd class="govuk-summary-list__value" name="national-insurance">
+                {{ data['last-name'] }}
+            </dd>
+            {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Email address
+            </dt>
+            {% if not data['email'] %}
+            <dd class="govuk-summary-list__value">
+              email@mail.co.uk
+            </dd>
+            {% else %}
+            <dd class="govuk-summary-list__value" name="national-insurance">
+                {{ data['email'] }}
+            </dd>
+            {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record#email">
+                Change<span class="govuk-visually-hidden"> contact details</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Date of birth
+            </dt>
+            {% if not data['dob-day'] %}
+            <dd class="govuk-summary-list__value">
+              11 November 1991
+            </dd>
+            {% else %}
+            <dd class="govuk-summary-list__value" name="dob">
+                {{ data['dob-day'] }}  {{ data['dob-month'] }}  {{ data['dob-year'] }}
+            </dd>
+            {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record#dob-day">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Postcode
+            </dt>
+            {% if not data['address-postcode'] %}
+            <dd class="govuk-summary-list__value">
+              XX52 0XN
+            </dd>
+            {% else %}
+            <dd class="govuk-summary-list__value" name="post">
+               {{ data['address-postcode'] }}
+            </dd>
+            {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record#address-postcode">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Mobile number
+            </dt>
+            {% if not data['mobile'] %}
+            <dd class="govuk-summary-list__value">
+              079847362892
+            </dd>
+            {% else %}
+            <dd class="govuk-summary-list__value" name="mob">
+               {{ data['mobile'] }}
+            </dd>
+            {% endif %}
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="edit-record#mobile">
+                Change<span class="govuk-visually-hidden"> address</span>
+              </a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Service type offered
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Online PIP2 only
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Claim invitation email last sent
+            </dt>
+            <dd class="govuk-summary-list__value">
+              21 December 2021
+            </dd>
+            <dd class="govuk-summary-list__actions">
+
+            </dd>
+          </div>
+        </dl>
+
+
+        <!--<p><a href="create-record-2" class="govuk-link">Change</a></p>-->
+
+          {{ govukRadios({
+            name: "action",
+            fieldset: {
+              legend: {
+                text: "What does the caller need?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+              }
+            },
+            items: [
+              {
+                value: "resend",
+                text: "Replacement invitation email for an in-progress claim "
+              },
+              {
+                value: "reclaim",
+                text: "New invitation email for a brand new claim",
+                hint: {
+                    text: "Original email not received or lost"
+                  }
+              }
+            ]
+          }) }}
+
+        <input type="submit" class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" value="Save and continue" id="submit">
+
+        <!-- <p><a href="pip-service-choice" class="govuk-link">Start again</a></p> -->
+
+      </div> <!-- govuk-grid-column-two-thirds -->
+    </div> <!-- govuk-grid-row -->
+
+  </form>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
